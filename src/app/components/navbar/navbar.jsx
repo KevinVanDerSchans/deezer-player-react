@@ -5,6 +5,7 @@ const Navbar = () => {
     <div className='navbar'>
       <nav>
         <ul className='navbarList'>
+
           <li className='navbarLabel'>
             <NavbarLink slug=''>
               <span className='navbarLabel'>Home</span>
@@ -13,7 +14,7 @@ const Navbar = () => {
 
           <li className='navbarLabel'>
             <NavbarLink slug='discover'>
-              <span className='navbarLabel'>Discover</span>
+              <span className='navbarDiscoverLabel'>Discover</span>
             </NavbarLink>
           </li>
 

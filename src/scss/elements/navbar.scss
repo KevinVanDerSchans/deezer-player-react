@@ -18,6 +18,16 @@
         color: $primary;
       }
     }
+
+    .navbarDiscoverLabel {
+      color: $primary;
+      transition: color 0.25s ease;
+
+      .navbarDiscoverLabel:active,
+      .navbarDiscoverLabel:hover {
+        color: $secondary;
+      }
+    }
   }
 }
 

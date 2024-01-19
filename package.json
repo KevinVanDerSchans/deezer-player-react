@@ -1,0 +1,54 @@
+{
+  "name": "deezer-player-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sass": "sass sass:css --watch",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "framer-motion": "^10.16.8",
+    "jsonwebtoken": "^9.0.2",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.1.0",
+    "react-router-hash-link": "^2.4.3",
+    "react-spinners": "^0.13.8",
+    "redux-persist": "^6.0.0",
+    "sweetalert2": "^11.10.1",
+    "typewriter-effect": "^2.20.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@radix-ui/react-slider": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^8.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8",
+    "sass": "^1.66.1",
+    "tailwindcss": "^3.3.0"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}

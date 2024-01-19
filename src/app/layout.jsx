@@ -1,4 +1,5 @@
-import Header from '../app/components/header'
+import Header from '../app/components/header';
+import Footer from '../app/components/footer';
 import { Inter } from 'next/font/google';
 import '../scss/style.scss';
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
 
+          <Footer />
         </div>
       </body>
     </html>

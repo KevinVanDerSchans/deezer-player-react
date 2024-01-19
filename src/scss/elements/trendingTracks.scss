@@ -1,0 +1,36 @@
+.trending-tracks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .trending-tracks-header {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 28px;
+    color: $dark;
+    padding: 120px 0px 0 30px;
+  }
+
+  .trending-tracks-container {
+    width: 96%;
+    gap: 30px;
+    padding: 40px 0;
+
+    .trending-tracks-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+}
+
+@media (width < 770px) {
+  .trending-tracks {
+
+    .trending-tracks-header {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

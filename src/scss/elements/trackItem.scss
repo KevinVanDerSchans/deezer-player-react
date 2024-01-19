@@ -1,0 +1,39 @@
+.track-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20em;
+  position: relative;
+  cursor: pointer;
+
+  .trending-item-image {
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .trending-track-details {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-items: first baseline;
+    flex-direction: column;
+    bottom: 10px;
+    left: 0;
+    padding: 30px 10px;
+    letter-spacing: 0.8px;
+    color: $light;
+    gap: 12px;
+    z-index: 1;
+
+    .trending-track-details-title {
+      font-size: 1.2rem;
+      font-weight: $font-weight-bold;
+    }
+
+    .trending-track-more-details {
+      color: $light-accent;
+    }
+  }
+}
+

@@ -1,3 +1,4 @@
+import ReduxProvider from './redux/ReduxProvider';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { IBM_Plex_Sans } from 'next/font/google';
@@ -17,16 +18,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ReduxProvider>
+          <div>
+            <Header />
 
-        <div>
-          <Header />
+            <main>
+              {children}
+            </main>
 
-          <main>
-            {children}
-          </main>
-
-          <Footer />
-        </div>
+            <Footer />
+          </div>
+      </ReduxProvider>
       </body>
     </html>
   );

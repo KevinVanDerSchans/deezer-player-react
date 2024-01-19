@@ -9,7 +9,7 @@ const Header = () => {
 
       <div className="logoAndSearch">
         <Link href="/" className="logo">
-          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} />
+          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} priority />
         </Link>
 
         <div className="searcher">

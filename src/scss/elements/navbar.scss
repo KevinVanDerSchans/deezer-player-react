@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  align-items: center;
+
+  .navbarList {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+
+    .navbarLabel {
+      color: $dark;
+      font-weight: $font-weight-medium;
+      transition: color 0.25s ease;
+      font-size: 0.94rem;
+
+      .navbarLabel:active,
+      .navbarLabel:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (width < 870px) {
+
+  .navbar {
+
+    .navbarList {
+      gap: 8px;
+    }
+  }
+}

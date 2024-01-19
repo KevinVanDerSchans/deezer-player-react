@@ -1,5 +1,5 @@
-import Header from '../app/components/header';
-import Footer from '../app/components/footer';
+import Header from '../app/components/Header/Header';
+import Footer from '../app/components/Footer/Footer';
 import { IBM_Plex_Sans } from 'next/font/google';
 import '../scss/style.scss';
 

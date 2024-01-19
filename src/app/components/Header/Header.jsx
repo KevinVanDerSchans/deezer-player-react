@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../navbar/navbar"
+import Navbar from "../Navbar/Navbar"
 
 const Header = () => {
   return (

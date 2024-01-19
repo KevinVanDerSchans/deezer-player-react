@@ -1,6 +1,6 @@
 # Deezer API
 
-### React / TypeScript
+### NextJS / React
 
 <br>
 

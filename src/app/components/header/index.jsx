@@ -1,6 +1,7 @@
 'use client';
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "../navbar/navbar"
 
 const Header = () => {
   return (
@@ -8,14 +9,14 @@ const Header = () => {
 
       <div className="logoAndSearch">
         <Link href="/" className="logo">
-          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={200} height={40} />
+          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} />
         </Link>
 
         <div className="searcher">
           <form>
             <label className="searchLabel">
               <div className="lensContainer">
-                <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={20} height={0} />
+                <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={20} height={20} />
               </div>
               <input
                 type="text"
@@ -29,6 +30,7 @@ const Header = () => {
       </div>
 
       <div className="navigation">
+        <Navbar />
 
         <div className="userIconContainer">
           <Image src='/assets/svg/user-icon.svg' alt='User icon' className="userIcon" width={50} height={50} />

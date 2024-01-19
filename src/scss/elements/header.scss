@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  align-items: center;
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.05);
+
+  .logoAndSearch {
+    display: flex;
+    width: 100%;
+    padding: 0px 48px 0px 28px;
+    gap: 48px;
+
+    .searcher {
+      width: 100%;
+
+      .searchLabel {
+        display: flex;
+        align-items: center;
+
+        .lensContainer {
+          display: flex;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+
+          .lens {
+            display: flex;
+            margin-left: 1em;
+          }
+        }
+
+        .searchInput {
+          width: 100%;
+          padding: 6px 13px 6px 50px;
+          height: 46px;
+          gap: 13px;
+          border-radius: 8px;
+          border: 1px solid #0000001A;
+          outline: none;
+          line-height: 20px;
+          letter-spacing: 1px;
+          font-family: inherit;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: end;
+    padding: 16px 48px 16px 0px;
+    gap: 24px;
+
+    .userIconContainer {
+      width: 50px;
+      height: 50px;
+      border: 0.5px solid #232323;
+      border-radius: 100%;
+      object-fit: fill;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (width < 870px) {
+
+  .header {
+    position: relative;
+
+    .logoAndSearch {
+      padding-left: 10px;
+      min-width: 20em;
+      gap: 20px;
+
+      .logo {
+        margin: 0;
+        padding: 0;
+      }
+
+      .searcher {
+        min-width: 170px;
+      }
+    }
+
+    .navigation {
+      width: 100%;
+      padding: 12px 10px 16px 0px;
+      gap: 14px;
+    }
+  }
+}
+
+@media (width < 870px) {
+  .header {
+    display: flex;
+    position: relative;
+
+    .logoAndSearch {
+
+      .searcher {
+        min-width: 164px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (width < 670px) {
+
+  .header {
+    position: relative;
+
+    .logoAndSearch {
+      padding-left: 10px;
+      min-width: 20em;
+      gap: 20px;
+
+      .logo {
+        width: max-content;
+        margin: 0;
+        padding: 0;
+      }
+
+      .searcher {
+        min-width: 170px;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 675px) {
+  .header {
+
+    .logoAndSearch {
+      padding-left: 40px;
+
+      .searcher {
+        min-width: 170px;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      position: absolute;
+      margin-top: 140px;
+      padding-right: 50px;
+    }
+  }
+}

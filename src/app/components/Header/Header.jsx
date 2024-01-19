@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../navbar/navbar"
+import Navbar from "../Navbar/Navbar"
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
 
       <div className="logoAndSearch">
         <Link href="/" className="logo">
-          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} />
+          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} priority />
         </Link>
 
         <div className="searcher">

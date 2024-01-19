@@ -1,4 +1,4 @@
-import NavbarLink from './navbar.link';
+import NavbarLink from './NavbarLink';
 
 const Navbar = () => {
   return (

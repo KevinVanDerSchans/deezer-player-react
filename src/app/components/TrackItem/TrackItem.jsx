@@ -1,11 +1,16 @@
 'use-client';
 import Link from 'next/link';
 import Image from 'next/image'
+import { useDispatch } from 'react-redux';
+import { playSong } from '../../redux/features/songsSlice';
 
-const TrackItem = ({ track: { title, artist, album } }) => {
+const TrackItem = ({ index, playlist, track: { id, title, duration, artist, album, type } }) => {
 
   return (
-    <li className='track-list-item'>
+    <li
+      className='track-list-item'
+
+    >
 
       <div className='track-list-item-container'>
         <Image
@@ -22,6 +27,7 @@ const TrackItem = ({ track: { title, artist, album } }) => {
           <Link
             href={ `/artist/${ artist.id }` }
             className='trending-track-more-details'
+
           >
             { artist.name }
           </Link>

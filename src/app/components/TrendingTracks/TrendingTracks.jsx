@@ -5,7 +5,7 @@ const TrendingTracks = ({ header, tracks }) => {
     <section className="trending-tracks">
 
       <div className='trending-tracks-header'>
-        { !! header && <h2>{ header }</h2> }
+        { !! header && <h1>{ header }</h1> }
       </div>
 
       <div className='trending-tracks-container'>

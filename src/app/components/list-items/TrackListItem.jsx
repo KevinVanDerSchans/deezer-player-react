@@ -1,19 +1,22 @@
+/* eslint-disable @next/next/no-img-element */
 'use-client';
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
 import { useDispatch } from 'react-redux';
 import { playSong } from '../../redux/features/songsSlice';
 
-const TrackItem = ({ index, playlist, track: { id, title, duration, artist, album, type } }) => {
+const TrackListItem = ({ index, playlist, track: { id, title, duration, artist, album, type } }) => {
+
+  {/*   const dispatch = useDispatch(); */}
 
   return (
     <li
       className='track-list-item'
 
     >
-
+    {/*   onClick={ () => dispatch(playSong({index, playlist})) }; */ }
       <div className='track-list-item-container'>
-        <Image
+        <img
           src={ album.cover_medium }
           alt="Album cover"
           width={340}
@@ -29,14 +32,16 @@ const TrackItem = ({ index, playlist, track: { id, title, duration, artist, albu
             className='trending-track-more-details'
 
           >
+          {/*   onClick={ (e) => e.stopPropagation() }; */}
+
             { artist.name }
           </Link>
 
-          <span className='trending-track-more-details'>{ album.title }</span>
+          {/* <span className='trending-track-more-details'>{ album.title }</span> */}
         </div>
       </div>
     </li>
   );
 };
 
-export default TrackItem;
+export default TrackListItem;

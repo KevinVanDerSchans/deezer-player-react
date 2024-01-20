@@ -2,6 +2,8 @@ import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
 const isServer = typeof window !== "undefined";
 
+// If running on the server-side (RSC)
+// fallback to a "noop storage" to prevent errors when creating synchronous storage
 const createNoopStorage = () => {
   return {
     getItem(_key) {

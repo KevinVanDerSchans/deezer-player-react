@@ -1,12 +1,12 @@
-import TrendingTracks from "../app/components/TrendingTracks/TrendingTracks";
-import { fetchTopTracks } from "../app/fetchers"
+import TrackListContainer from "../app/components/others/TrackListContainer";
+import { fetchTopTracks } from "../app/fetchers";
 
 export default async function Home() {
   const tracks = await fetchTopTracks({ limit: 20 })
 
   return (
     <div>
-      <TrendingTracks
+      <TrackListContainer
         header="Trending hits:"
         tracks={ tracks }
       />

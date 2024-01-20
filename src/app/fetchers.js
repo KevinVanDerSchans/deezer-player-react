@@ -17,7 +17,6 @@ export async function fetchTrack(id) {
   const endpoint = `/track/${ id }`;
   const data = await fetchData(endpoint);
 
-  console.log
 
   return data;
 }

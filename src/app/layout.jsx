@@ -1,9 +1,9 @@
-import Header from '../app/components/header';
+import Navbar from '../app/components/Navbar/navbar'
 import Footer from '../app/components/footer';
-import { IBM_Plex_Sans } from 'next/font/google';
-import '../scss/style.scss';
 import Player from './components/Player/Player';
 import ReduxProvider from './redux/ReduxProvider';
+import { IBM_Plex_Sans } from 'next/font/google';
+import '../scss/style.scss';
 
 const inter = IBM_Plex_Sans({
   weight: ['400'],
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ReduxProvider>
           <div>
-            <Header />
+            <Navbar />
 
             <main>
               {children}

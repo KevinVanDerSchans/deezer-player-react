@@ -1,6 +1,7 @@
-import TrackItem from '../TrackItem/TrackItem';
+import React from 'react';
+import TrackListItem from '../list-items/TrackListItem';
 
-const TrendingTracks = ({ header, tracks }) => {
+const TrackListContainer = ({ header, tracks }) => {
   return (
     <section className="trending-tracks">
 
@@ -11,8 +12,8 @@ const TrendingTracks = ({ header, tracks }) => {
       <div className='trending-tracks-container'>
         <ul className='trending-tracks-list'>
           {
-            tracks.map(( track, index) =>
-              <TrackItem
+            tracks.map(( track, index ) =>
+              <TrackListItem
                 key={ track.id }
                 index= { index }
                 playlist={ tracks }
@@ -26,4 +27,4 @@ const TrendingTracks = ({ header, tracks }) => {
   )
 }
 
-export default TrendingTracks;
+export default TrackListContainer;

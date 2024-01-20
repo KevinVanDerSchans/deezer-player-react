@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  album: [],
   track: [],
-}
+  radio: [],
+  artist: [],
+  playlist: [],
+};
 
 const favoriteSlice = createSlice({
   name: 'favorites',
@@ -18,7 +22,7 @@ const favoriteSlice = createSlice({
 
       state[type] = state[type].filter(favoriteId => favoriteId !== id);
     },
-  },
+  }
 });
 
 export const { addToFavorites, removeFromFavorites } = favoriteSlice.actions;

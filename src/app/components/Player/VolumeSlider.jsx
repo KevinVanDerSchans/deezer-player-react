@@ -12,7 +12,7 @@ const VolumeSlider = ({ onChange, audioVolume }) => {
       onValueChange={ (value) => onChange(value) }
     >
     <Slider.Track className="slider-track">
-        <Slider.Range className="slider-range" />
+      <Slider.Range className="slider-range" />
     </Slider.Track>
 
     <Slider.Thumb className="slider-thumb" />

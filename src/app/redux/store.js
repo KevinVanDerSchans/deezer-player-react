@@ -1,8 +1,8 @@
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist'
 import { configureStore } from "@reduxjs/toolkit";
-import storage from './utils/storage';
 import songsReducer from './features/songsSlice';
 import favoritesReducer from './features/favoritesSlice';
+import storage from './utils/storage';
 
 const persistConfig = {
   key: 'favorites',
@@ -19,7 +19,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoredActions: [ FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER ],
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
 });

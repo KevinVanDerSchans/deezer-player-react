@@ -4,8 +4,8 @@ import WaveSurfer from 'wavesurfer.js';
 const options = {
   waveColor: '#ccc',
   progressColor: '#EF5466',
-  responsive: true,
   fillParent: true,
+  responsive: true,
   autoplay: true,
   cursorWidth: 0,
   barHeight: 0.5,
@@ -15,7 +15,7 @@ const options = {
 const useWavesurfer = (waveContainerRef, audioSrc, onFinish) => {
   const waveSurferRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audioVolume, setAudioVolume] = useState({ isMuted: false, value: 1 });
+  const [audioVolume, setAudioVolume] = useState({ isMuted: false, value: 1, });
 
   useEffect(() => {
     waveSurferRef.current = WaveSurfer.create({
@@ -39,11 +39,11 @@ const useWavesurfer = (waveContainerRef, audioSrc, onFinish) => {
   waveSurferRef?.current?.setVolume(audioVolume.isMuted ? 0 : audioVolume.value);
 
   return {
-    handlePlayPause: () => waveContainerRef?.current?.playPause(),
+    handlePlayPause: () => waveSurferRef?.current?.playPause(),
     audioVolume,
     setAudioVolume,
-    isPlaying
+    isPlaying,
   }
-}
+};
 
 export default useWavesurfer;

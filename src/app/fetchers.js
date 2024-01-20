@@ -13,6 +13,15 @@ async function fetchData(endpoint) {
   return data;
 }
 
+export async function fetchTrack(id) {
+  const endpoint = `/track/${ id }`;
+  const data = await fetchData(endpoint);
+
+  console.log
+
+  return data;
+}
+
 export async function fetchTopTracks({ limit = 10 } = {}) {
   const endpoint = `/chart/0/tracks?limit=${ limit }`;
   const { data } = await fetchData(endpoint);

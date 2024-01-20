@@ -13,7 +13,7 @@ const TrackItem = ({ index, playlist, track: { id, title, duration, artist, albu
     >
 
       <div className='track-list-item-container'>
-        <Image
+        <img
           src={ album.cover_medium }
           alt="Album cover"
           width={340}

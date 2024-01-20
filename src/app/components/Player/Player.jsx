@@ -11,10 +11,7 @@ const Player = () => {
   const dispatch = useDispatch();
   const waveContainerRef = useRef(null);
   const { album, title, artist, preview: audioSrc, duration } = useSelector(selectCurrentSong);
-
-  const { handlePlayPause, isPlaying, setAudioVolume, audioVolume } =
-    useWavesurfer(waveContainerRef, audioSrc, () =>
-      dispatch(playNextSong()));
+  const { handlePlayPause, isPlaying, setAudioVolume, audioVolume } = useWavesurfer(waveContainerRef, audioSrc, () => dispatch(playNextSong()));
 
   return (
     <>
@@ -29,10 +26,9 @@ const Player = () => {
           </div>
         </div>
 
-
         <div className='control-buttons'>
           <button onClick={ () => dispatch(playPreviousSong()) }>
-              <MdSkipPrevious />
+            <MdSkipPrevious />
           </button>
 
           <button

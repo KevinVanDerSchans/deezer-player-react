@@ -26,7 +26,7 @@ const SearchResults = ({ query }) => {
                     <ul className='search-list'>
                       {
                         ! resultsObj[type].length ?
-                          <span className='search-no-results'>No results found... please, try another artist !</span>
+                          <span className='search-no-results'>No results found.</span>
 
                         :
                           resultsObj[type].map(result =>

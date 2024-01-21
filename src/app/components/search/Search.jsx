@@ -1,10 +1,24 @@
 'use client';
 import Image from "next/image";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SearchResults from "./SearchResults";
 
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState('');
+
+  const handleOutsideClick = (e) => {
+    if (!e.target.closest('.searcher')) {
+      setSearchQuery('');
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      window.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
 
   return (
     <div className="searcher">

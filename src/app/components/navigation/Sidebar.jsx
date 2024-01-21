@@ -27,19 +27,19 @@ const Sidebar = () => {
               </li>
 
               <li className='navbarLabel'>
-                <NavLink slug='top_tracks'>
+                <NavLink slug='discover'>
                   <span className='navbarDiscoverLabel'>Discover</span>
                 </NavLink>
               </li>
 
               <li className='navbarLabel'>
-                <NavLink slug='top_artists'>
+                <NavLink slug='recents'>
                   <span className='navbarLabel'>Recents</span>
                 </NavLink>
               </li>
 
               <li className='navbarLabel'>
-                <NavLink slug='radio'>
+                <NavLink slug='library'>
                   <span className='navbarLabel'>Library</span>
                 </NavLink>
               </li>

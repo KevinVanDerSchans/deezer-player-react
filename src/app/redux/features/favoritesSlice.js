@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  album: [],
   track: [],
-  radio: [],
+  album: [],
   artist: [],
-  playlist: [],
 };
 
 const favoriteSlice = createSlice({

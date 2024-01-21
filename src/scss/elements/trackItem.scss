@@ -1,5 +1,6 @@
 .track-list-item {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -8,16 +9,43 @@
   cursor: pointer;
 
   .trending-item-image {
+    display: flex;
     border-radius: 16px;
     object-fit: cover;
+    opacity: 0.9;
+    filter: brightness(0.9);
+  }
+
+  .trending-item-image::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    );
+    pointer-events: none;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    transition: opacity 0.7s ease;
   }
 
   .trending-track-details {
     display: flex;
     position: absolute;
     width: 100%;
-    justify-items: first baseline;
-    flex-direction: column;
+    justify-content: space-between;
     bottom: 10px;
     left: 0;
     padding: 30px 10px;
@@ -26,18 +54,33 @@
     gap: 12px;
     z-index: 1;
 
-    .trending-track-details-title {
-      font-size: 1.2rem;
-      font-weight: $font-weight-bold;
+    .trending-track-details-text {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+      .trending-track-details-title {
+        font-size: 1.2rem;
+        font-weight: $font-weight-bold;
+      }
+
+      .file-type::first-letter {
+        text-transform: uppercase;
+      }
     }
 
-    .trending-track-more-details {
-      color: $light-accent;
-    }
-
-    .file-type::first-letter {
-      text-transform: uppercase;
+    .favorite-button-container {
+      display: flex;
     }
   }
 }
 
+.track-list-item:hover .play-icon {
+  opacity: 1;
+}
+
+.track-list-item:hover .trending-item-image {
+  filter: brightness(0.7);
+}

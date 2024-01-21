@@ -2,11 +2,12 @@ import { notFound } from "next/navigation";
 
 const base = 'https://api.deezer.com';
 
+
 async function fetchData(endpoint) {
   const response = await fetch(base + endpoint);
   const data = await response.json();
 
-  if(data.error?.code === 800) {
+  if (data.error?.code === 800) {
     return notFound();
   }
 

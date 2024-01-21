@@ -8,8 +8,8 @@ const options = {
   responsive: true,
   autoplay: true,
   cursorWidth: 0,
-  barHeight: 0.5,
-  barGap: 3,
+  barHeight: 50,
+  barGap: 0,
 };
 
 const useWavesurfer = (waveContainerRef, audioSrc, onFinish) => {

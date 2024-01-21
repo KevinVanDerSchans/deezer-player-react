@@ -7,8 +7,9 @@ async function fetchData(endpoint) {
   const data = await response.json();
 
   if(data.error?.code === 800) {
-      return notFound();
+    return notFound();
   }
+
   return data;
 }
 
@@ -24,4 +25,14 @@ export async function fetchTopTracks({ limit = 10 } = {}) {
   const { data } = await fetchData(endpoint);
 
   return data;
+}
+
+export async function fetchSearchData(query, { limit = 3 } = {}) {
+  const endpoint = (category) => `/search/${ category }?q=${ query }&limit=${ limit }`;
+
+  const tracksPromise = fetchData(endpoint('track'));
+  const albumsPromise = fetchData(endpoint('album'));
+  const artistsPromise = fetchData(endpoint('artist'));
+
+  return await Promise.all([tracksPromise, albumsPromise, artistsPromise]);
 }

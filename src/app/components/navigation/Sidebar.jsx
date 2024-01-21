@@ -1,6 +1,7 @@
 import NavLink from './NavLink';
 import Image from "next/image";
 import Link from 'next/link';
+import Search from '../search/Search';
 
 const Sidebar = () => {
   return (
@@ -11,21 +12,7 @@ const Sidebar = () => {
           <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} priority />
         </Link>
 
-        <div className="searcher">
-          <form>
-            <label className="searchLabel">
-              <div className="lensContainer">
-                <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={20} height={20} />
-              </div>
-              <input
-                type="text"
-                placeholder="Search artists"
-                title='Write your favorite artist'
-                className="searchInput"
-              />
-            </label>
-          </form>
-        </div>
+        <Search />
       </div>
 
       <div className="navigation">

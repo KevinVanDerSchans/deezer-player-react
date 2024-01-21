@@ -1,0 +1,13 @@
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0;
+}
+
+.favorite,
+.favorite.active {
+  font-size: 2.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

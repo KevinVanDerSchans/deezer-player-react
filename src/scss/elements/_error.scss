@@ -1,16 +1,42 @@
-.not-found-page {
+.error-container {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  padding: 280px 0;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-  .error-title {
-    font-size: 4rem;
+  .not-found-page-container {
+    display: flex;
+    padding: 40px;
+    box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+
+    .not-found-title {
+      color: $primary;
+      font-size: 1.8rem;
+      font-weight: $font-weight-bold;
+    }
+
+    .not-found-description {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.1rem;
+      gap: 8px;
+    }
+
+    .not-found-link-home {
+      color: $secondary;
+      font-weight: $font-weight-bold;
+    }
   }
+}
 
-  .error-description {
-    margin-top: 20px;
+@media (width < 670px) {
+
+  .error-container {
+    height: 90vh;
   }
 }

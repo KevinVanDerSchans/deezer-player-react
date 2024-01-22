@@ -5,7 +5,7 @@ const RecentsPage = () => {
   return (
     <div className="discover-container">
       <UnderConstruction />
-  </div>
+    </div>
   )
 }
 

@@ -27,7 +27,10 @@ const FavoriteButton = ({ type, id }) => {
       className={ isFavorite ? `favorite active` : 'favorite' }
       onClick={ handleFavoriteClick }
     >
-      { isFavorite ? <FcLike /> : <PiHeartFill />}
+    {isFavorite
+      ? <span className="favorite-icon"><FcLike /></span>
+      : <span className="favorite-icon"><PiHeartFill /></span>
+    }
     </button>
   )
 };

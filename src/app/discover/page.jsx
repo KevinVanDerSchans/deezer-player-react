@@ -2,7 +2,9 @@
 
 const DiscoverPage = () => {
   return (
-    <span>DISCOVER</span>
+    <div className="discover-container">
+      <span>DISCOVER</span>
+    </div>
   )
 }
 

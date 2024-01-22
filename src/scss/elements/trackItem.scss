@@ -39,6 +39,10 @@
     height: 70px;
     opacity: 0;
     transition: opacity 0.7s ease;
+    background-image: url('/assets/svg/play.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .trending-track-details {

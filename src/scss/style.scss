@@ -4,6 +4,10 @@
 @import './elements//error';
 @import './elements/spinner';
 
+@import './elements/artist.scss';
+@import './elements/discover.scss';
+@import './elements/library.scss';
+
 @import './elements/header.scss';
 @import './elements/navbar.scss';
 @import './elements/player.scss';
@@ -11,5 +15,3 @@
 @import './elements/footer.scss';
 @import './elements/trendingTracks.scss';
 @import './elements/trackItem.scss';
-
-@import './elements/library.scss';

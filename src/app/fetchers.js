@@ -28,12 +28,25 @@ export async function fetchTopTracks({ limit = 10 } = {}) {
   return data;
 }
 
+export async function fetchArtist(id) {
+  const endpoint = `/artist/${ id }`;
+  const data = await fetchData(endpoint);
+
+  return data;
+}
+
+export async function fetchArtistTopTracks(id) {
+  const endpoint = `/artist/${ id }/top`;
+  const { data } = await fetchData(endpoint);
+
+  return data;
+}
+
 export async function fetchSearchData(query, { limit = 3 } = {}) {
   const endpoint = (category) => `/search/${ category }?q=${ query }&limit=${ limit }`;
 
   const tracksPromise = fetchData(endpoint('track'));
-  const albumsPromise = fetchData(endpoint('album'));
   const artistsPromise = fetchData(endpoint('artist'));
 
-  return await Promise.all([tracksPromise, albumsPromise, artistsPromise]);
+  return await Promise.all([tracksPromise, artistsPromise]);
 }

@@ -18,16 +18,15 @@ const FavoriteButton = ({ type, id }) => {
   const handleFavoriteClick = (e) => {
     e.stopPropagation();
 
-    isFavorite
-      ? dispatch(removeFromFavorites({ type, id }))
-      : dispatch(addToFavorites({ type, id }));
+    if (isFavorite) {
+      dispatch(removeFromFavorites({ type, id }));
 
       Swal.fire({
         position: "bottom-end",
         icon: "info",
         iconColor: '#000033',
         color: '#000000',
-        title: "Library updated",
+        title: "Removed from Library",
         showConfirmButton: false,
         timer: 1500,
         customClass: {
@@ -37,7 +36,28 @@ const FavoriteButton = ({ type, id }) => {
           Swal.getPopup().style.background = 'linear-gradient(to bottom, #e7969f, #EF5466)';
           Swal.getTitle().style.fontSize = '1.2rem';
         }
-      })
+      });
+
+    } else {
+      dispatch(addToFavorites({ type, id }));
+
+      Swal.fire({
+        position: "bottom-end",
+        icon: "info",
+        iconColor: '#000033',
+        color: '#000000',
+        title: "Added to Library",
+        showConfirmButton: false,
+        timer: 1500,
+        customClass: {
+          container: 'custom-swal-container',
+        },
+        didOpen: () => {
+          Swal.getPopup().style.background = 'linear-gradient(to bottom, #e7969f, #EF5466)';
+          Swal.getTitle().style.fontSize = '1.2rem';
+        }
+      });
+    }
   };
 
   return (

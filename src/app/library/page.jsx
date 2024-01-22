@@ -7,32 +7,35 @@ import Spinner from '../spinner';
 
 const LibraryPage = () => {
   return (
-    <Tabs.Root
-      className='tabs-container'
-      defaultValue='tracks'
-    >
-      <Tabs.List className='tabs-list'>
-        <Tabs.Trigger value='tracks'>Tracks</Tabs.Trigger>
-      </Tabs.List>
+    <div className='library-section'>
+      <Tabs.Root
+        className='tabs-container'
+        defaultValue='tracks'
+      >
+        <Tabs.List className='tabs-list'>
+          <Tabs.Trigger value='tracks' className='tabs-list-title'>Tracks</Tabs.Trigger>
+          <Tabs.Trigger value='artists' className='tabs-list-title'>Artists</Tabs.Trigger>
+        </Tabs.List>
 
-      <Suspense fallback={ <Spinner /> }>
-        <SWRConfig
-          value={{
-            fetcher: async ({ entitiesIds, endpoint }) => {
-              const promises = entitiesIds.map(async (id) => {
-                const res = await fetch(endpoint + '/' + id);
+        <Suspense fallback={ <Spinner /> }>
+          <SWRConfig
+            value={{
+              fetcher: async ({ entitiesIds, endpoint }) => {
+                const promises = entitiesIds.map(async (id) => {
+                  const res = await fetch(endpoint + '/' + id);
 
-                return res.json();
-              });
-              return await Promise.all(promises);
-            },
-            suspense: true
-          }}
-        >
-          <TabsContainer />
-        </SWRConfig>
-      </Suspense>
-    </Tabs.Root>
+                  return res.json();
+                });
+                return await Promise.all(promises);
+              },
+              suspense: true
+            }}
+          >
+            <TabsContainer />
+          </SWRConfig>
+        </Suspense>
+      </Tabs.Root>
+    </div>
   )
 }
 

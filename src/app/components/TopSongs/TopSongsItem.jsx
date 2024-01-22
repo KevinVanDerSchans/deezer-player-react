@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { playSong } from '../../redux/features/songsSlice';
 import FavoriteButton from '../Favorites/FavoriteButton';
 
-const TrackListItem = ({ index, playlist, track: { id, title, artist, album, type } }) => {
+const TopSongsItem = ({ index, playlist, track: { id, title, artist, album, type } }) => {
   const dispatch = useDispatch();
 
   return (
@@ -21,8 +21,6 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
           width={340}
           height={280}
         />
-
-        <div className='play-icon'></div>
 
         <div className='trending-track-details'>
 
@@ -43,4 +41,4 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
   );
 };
 
-export default TrackListItem;
+export default TopSongsItem;

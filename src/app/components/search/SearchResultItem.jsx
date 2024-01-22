@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
+import Image from 'next/image';
 import { playSong} from '../../redux/features/songsSlice';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
@@ -18,10 +18,12 @@ const SearchResultItem = ({ type, result }) => {
           : () => router.push(`/${ type }/${id }`)
       }
     >
-      <img
+      <Image
         className='search-image'
         src={ picture_medium || `https://e-cdns-images.dzcdn.net/images/artist/${ md5_image }/1000x1000-000000-80-0-0.jpg`}
         alt={ title || name }
+        width={200}
+        height={200}
       />
 
       <span className='overflowing-text'>{ name || title }</span>

@@ -21,12 +21,18 @@ const LibraryPage = () => {
           <SWRConfig
             value={{
               fetcher: async ({ entitiesIds, endpoint }) => {
-                const promises = entitiesIds.map(async (id) => {
-                  const res = await fetch(endpoint + '/' + id);
+                try {
+                  const promises = entitiesIds.map(async (id) => {
+                    const res = await fetch(endpoint + '/' + id);
 
-                  return res.json();
-                });
-                return await Promise.all(promises);
+                    return res.json();
+                  });
+                  return await Promise.all(promises);
+                }
+
+                catch(error) {
+                  throw error;
+                }
               },
               suspense: true
             }}

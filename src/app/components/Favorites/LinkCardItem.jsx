@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -6,7 +6,12 @@ const LinkCardItem = ({ href, imgSrc, title, description }) => {
   return (
     <li className='card-container'>
       <Link href={ href }>
-        <img src={ imgSrc } alt="" />
+        <Image
+          src={ imgSrc }
+          alt="Artist"
+          width={200}
+          height={200}
+        />
         <strong>{ title }</strong>
 
         {

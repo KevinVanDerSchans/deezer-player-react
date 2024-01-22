@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { playSong } from '../../redux/features/songsSlice';
 import FavoriteButton from '../Favorites/FavoriteButton';
@@ -14,7 +14,7 @@ const TopSongsItem = ({ index, playlist, track: { id, title, artist, album, type
       onClick={ () => dispatch(playSong({index, playlist})) }
     >
       <div className='track-list-item-container'>
-        <img
+        <Image
           src={ album.cover_medium }
           alt=""
           className='trending-item-image'
@@ -23,7 +23,6 @@ const TopSongsItem = ({ index, playlist, track: { id, title, artist, album, type
         />
 
         <div className='trending-track-details'>
-
           <div className='trending-track-details-text'>
             <strong className='trending-track-details-title'>{ title }</strong>
             <span className='file-type'>{ artist.name }</span>
@@ -33,9 +32,7 @@ const TopSongsItem = ({ index, playlist, track: { id, title, artist, album, type
           <div className='favorite-button-container'>
             <FavoriteButton id={ id } type={ type }/>
           </div>
-
         </div>
-
       </div>
     </li>
   );

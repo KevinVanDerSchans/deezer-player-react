@@ -1,7 +1,12 @@
 import { fetchTrack } from '../../../fetchers';
 
 export async function GET(req, { params }) {
-  const data = await fetchTrack(params.id);
+  try {
+    const data = await fetchTrack(params.id);
 
-  return Response.json(data);
+    return Response.json(data);
+  }
+  catch(error) {
+    throw error;
+  }
 }

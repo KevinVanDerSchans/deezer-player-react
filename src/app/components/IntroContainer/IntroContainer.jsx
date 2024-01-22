@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
+import Image from 'next/image';
 import { playSong } from "../../redux/features/songsSlice";
 import FavoriteButton from "../Favorites/FavoriteButton";
 import { useDispatch } from 'react-redux';
@@ -9,7 +9,7 @@ const IntroContainer = ({ id, imgSrc, title, description, playlist, type }) => {
 
   return (
     <div className='intro-container'>
-      <img src={ imgSrc } alt="Artist" className="artist-image" width={200} height={200}/>
+      <Image src={ imgSrc } alt="Artist" className="artist-image" width={200} height={200}/>
 
       <div className='intro-details'>
         <span className="artist-name">{ title }</span>

@@ -10,7 +10,6 @@ export default async function Home() {
         header="Trending hits:"
         tracks={ tracks }
       />
-
     </div>
   );
 }

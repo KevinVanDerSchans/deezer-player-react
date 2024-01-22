@@ -9,6 +9,7 @@
     justify-content: center;
     gap: 60px;
     padding-top: 80px;
+    padding-bottom: 0px;
 
     .tabs-list-title {
       background: none;
@@ -36,3 +37,16 @@
 .favorite-icon:hover {
   color: #ff0000;
 }
+
+.favorite-artist-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  font-size: 1rem;
+  text-shadow: none;
+  font-weight: $font-weight-bold;
+  color: $primary;
+}
+
+
+

@@ -22,8 +22,10 @@ footer {
 
     .company {
       display: flex;
+      text-align: center;
+      justify-content: center;
       gap: 1rem;
-      width: 8rem;
+      padding-right: 48px;
       height: 2rem;
       overflow: hidden;
 

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-const base = 'https://api.deezer.com';
+const base = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 
 async function fetchData(endpoint) {

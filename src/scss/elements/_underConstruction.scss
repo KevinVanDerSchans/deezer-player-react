@@ -1,0 +1,29 @@
+.discover-container {
+
+  .under-construction-section {
+    display: flex;
+    padding: 40px;
+    box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.12);
+
+    .under-construction-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 30px;
+
+      .under-construction-title {
+        color: $primary;
+        font-size: 1.8rem;
+        font-weight: $font-weight-bold;
+      }
+
+      .under-construction-developers,
+      .under-construction-apologize {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

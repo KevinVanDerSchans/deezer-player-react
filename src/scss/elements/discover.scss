@@ -8,3 +8,10 @@
     display: flex;
   }
 }
+
+@media (width < 670px) {
+
+  .discover-container {
+    height: 90vh;
+  }
+}

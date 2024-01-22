@@ -1,8 +1,11 @@
 'use client';
+import UnderConstruction from "../components/UnderConstruction/UnderConstruction";
 
 const RecentsPage = () => {
   return (
-    <span>RECENTS</span>
+    <div className="discover-container">
+      <UnderConstruction />
+  </div>
   )
 }
 

@@ -79,7 +79,8 @@ const Player = () => {
                     <VolumeSlider
                       className='volume-slider'
                       audioVolume={ audioVolume }
-                      onChange={ ([ value ]) => { setAudioVolume({ isMuted: value <= 0 ? true : false, value }) } }
+                      onChange={ ([ value ]) =>
+                        { setAudioVolume({ isMuted: value <= 0 ? true : false, value }) } }
                     />
                 }
               </div>

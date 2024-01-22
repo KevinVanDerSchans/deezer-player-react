@@ -29,6 +29,8 @@
       gap: 20px;
 
       .song-album {
+        width: 80px;
+        height: 80px;
         border-radius: 8px;
       }
 
@@ -40,13 +42,14 @@
         gap: 10px;
 
         .song-title {
-          font-size: 1.05rem;
+          font-size: 20px;
           color: $dark;
           font-weight: $font-weight-bold;
           cursor: default;
         }
 
         .artist-name {
+          font-size: 18px;
           cursor: default;
         }
       }
@@ -69,10 +72,11 @@
 
         .buttons {
           display: flex;
+          width: 40px;
+          height: 40px;
           justify-content: center;
           width: 100%;
           gap: 10px;
-
 
           .previous-button,
           .play-button,
@@ -104,19 +108,21 @@
 
     .wave {
       display: flex;
+      width: 100%;
       justify-content: center;
       align-items: center;
       gap: 12px;
-      width: 100%;
       z-index: 900;
 
       .wave-container {
         width: 560px;
-        height: 4px;
+        min-height: 6px;
+        border-radius: 7px;
+        cursor: pointer;
       }
 
       .duration {
-        font-size: 0.8rem;
+        font-size: 14px;
         font-weight: $font-weight-bold;
         line-height: 20px;
         cursor: default;
@@ -134,13 +140,13 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 1vw;
+
 
     .volume {
       display: flex;
 
       .volume-button {
-        font-size: 1.2em;
+        font-size: 1.4em;
         line-height: 0;
         background-color: transparent;
         border: none;
@@ -153,6 +159,7 @@
 
       .volume-icon {
         width: 24px;
+        height: auto;
       }
     }
 
@@ -178,7 +185,7 @@
         display: flex;
         flex-direction: row;
         width: 110px;
-        height: 5px;
+        height: 6px;
         position: relative;
         flex-grow: 1;
         border-radius: 7px;
@@ -240,7 +247,7 @@
 
           .song-title,
           .artist-name {
-            font-size: 0.7rem;
+            font-size: 0.6rem;
           }
         }
       }
@@ -251,6 +258,9 @@
         .controls {
 
           .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 6px;
 
             .previous-button,

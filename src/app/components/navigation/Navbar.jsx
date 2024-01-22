@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import Search from '../search/Search';
 
-const Sidebar = () => {
+const Navbar = () => {
   return (
     <header className="header" id="header">
 
@@ -56,4 +56,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;

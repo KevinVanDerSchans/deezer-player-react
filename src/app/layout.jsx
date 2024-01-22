@@ -1,6 +1,6 @@
-import Sidebar from './components/navigation/Sidebar';
+import Navbar from './components/Navigation/Navbar';
 import Player from './components/Player/Player';
-import Footer from '../app/components/footer';
+import Footer from './components/Footer/Footer';
 import ReduxProvider from './redux/ReduxProvider';
 import { IBM_Plex_Sans } from 'next/font/google';
 import '../scss/style.scss';
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body>
         <ReduxProvider>
           <div>
-            <Sidebar />
+            <Navbar />
 
             <div>
               <main>

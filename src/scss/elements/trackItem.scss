@@ -88,3 +88,7 @@
 .track-list-item:hover .trending-item-image {
   filter: brightness(0.7);
 }
+
+.custom-swal-container {
+  z-index: 99999;
+}

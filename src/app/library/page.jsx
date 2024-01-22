@@ -29,6 +29,7 @@ const LibraryPage = () => {
                   });
                   return await Promise.all(promises);
                 }
+
                 catch(error) {
                   throw error;
                 }

@@ -4,49 +4,82 @@ const base = 'https://api.deezer.com';
 
 
 async function fetchData(endpoint) {
-  const response = await fetch(base + endpoint);
-  const data = await response.json();
+  try {
+    const response = await fetch(base + endpoint);
 
-  if (data.error?.code === 800) {
-    return notFound();
-  }
+    if(!response.ok) {
+      throw new Error(`Error in server response: ${response.status}`);
+    }
+    const data = await response.json();
 
-  return data;
-}
+    if (data.error?.code === 800) {
+      return notFound();
+    }
+    return data;
+
+  } catch (error) {
+    throw error;
+  };
+};
 
 export async function fetchTrack(id) {
-  const endpoint = `/track/${ id }`;
-  const data = await fetchData(endpoint);
+  try {
+    const endpoint = `/track/${ id }`;
+    const data = await fetchData(endpoint);
 
-  return data;
+    return data;
+
+  } catch (error) {
+    throw new Error(`Error getting track: ${error.message}`)
+  }
 }
 
 export async function fetchTopTracks({ limit = 10 } = {}) {
-  const endpoint = `/chart/0/tracks?limit=${ limit }`;
-  const { data } = await fetchData(endpoint);
+  try {
+    const endpoint = `/chart/0/tracks?limit=${ limit }`;
+    const { data } = await fetchData(endpoint);
 
-  return data;
+    return data;
+
+  } catch (error) {
+    throw new Error(`Error getting top tracks: ${error.message}`)
+  }
 }
 
 export async function fetchArtist(id) {
-  const endpoint = `/artist/${ id }`;
-  const data = await fetchData(endpoint);
+  try {
+    const endpoint = `/artist/${ id }`;
+    const data = await fetchData(endpoint);
 
-  return data;
+    return data;
+
+  } catch {
+    throw new Error(`Error getting artist: ${error.message}`);
+  }
 }
 
 export async function fetchArtistTopTracks(id) {
-  const endpoint = `/artist/${ id }/top`;
-  const { data } = await fetchData(endpoint);
+  try {
+    const endpoint = `/artist/${ id }/top`;
+    const { data } = await fetchData(endpoint);
 
-  return data;
+    return data;
+
+  } catch (error) {
+    throw new Error(`Error getting the best tracks of the artist: ${error.message}`);
+  }
 }
 
 export async function fetchSearchData(query, { limit = 3 } = {}) {
-  const endpoint = (category) => `/search/${ category }?q=${ query }&limit=${ limit }`;
+  try {
+    const endpoint = (category) => `/search/${ category }?q=${ query }&limit=${ limit }`;
 
-  const tracksPromise = fetchData(endpoint('track'));
-  const artistsPromise = fetchData(endpoint('artist'));
+    const tracksPromise = fetchData(endpoint('track'));
+    const artistsPromise = fetchData(endpoint('artist'));
 
-  return await Promise.all([tracksPromise, artistsPromise]);
+    return await Promise.all([tracksPromise, artistsPromise]);
+
+  } catch (error) {
+    throw new Error(`Error while performing the search: ${error.message}`);
+  }
 }

@@ -21,7 +21,7 @@ const Player = () => {
         <div className='player-content'>
 
           <div className="song-data">
-            <img className='song-album' src={ album?.cover_small } alt='Album cover' width={80} height={80}/>
+            <img className='song-album' src={ album?.cover_small } alt='Album cover' />
 
             <div className='song-details'>
               <span className='song-title'>{ title_short }</span>
@@ -68,7 +68,9 @@ const Player = () => {
                   className='volume-button'
                   onClick={ () => setAudioVolume((prev) => ({ ...prev, isMuted: prev.value <= 0 ? true : ! prev.isMuted })) }>
                   {
-                    audioVolume.isMuted ? <MdVolumeMute /> : <img className='volume-icon' src='/assets/svg/volume.svg' alt='Change volume value' />
+                    audioVolume.isMuted
+                      ? <MdVolumeMute />
+                      : <img width={90} height={90} className='volume-icon' src='/assets/svg/volume.svg' alt='Change volume value' />
                   }
                 </button>
 

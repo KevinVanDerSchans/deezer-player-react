@@ -7,20 +7,21 @@
   .trending-tracks-header {
     width: 100%;
     justify-content: flex-start;
-    font-size: 28px;
+    font-size: 32px;
     color: $dark;
-    padding: 120px 0px 0 30px;
+    padding: 120px 0px 0 48px;
+    cursor: default;
   }
 
   .trending-tracks-container {
-    width: 96%;
+    width: 100%;
     gap: 30px;
-    padding: 40px 0;
+    padding: 40px 48px;
 
     .trending-tracks-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      grid-gap: 1rem;
+      grid-gap: 2rem;
     }
   }
 }

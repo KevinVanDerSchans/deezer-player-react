@@ -13,13 +13,13 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
       className='track-list-item'
       onClick={ () => dispatch(playSong({index, playlist})) }
     >
-      <div className='track-list-item-container'>
+
         <Image
           src={ album.cover_medium }
           alt=""
           className='trending-item-image'
-          width={340}
-          height={280}
+          width={312}
+          height={312}
         />
 
         <div className='play-icon'></div>
@@ -38,7 +38,7 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
 
         </div>
 
-      </div>
+
     </li>
   );
 };

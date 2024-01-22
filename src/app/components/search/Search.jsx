@@ -25,7 +25,7 @@ const Search = () => {
       <form>
         <label className="searchLabel">
           <div className="lensContainer">
-            <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={20} height={20} />
+            <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={19} height={19} />
           </div>
 
           <input

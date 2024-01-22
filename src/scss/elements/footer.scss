@@ -8,7 +8,7 @@ footer {
     bottom: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding-left: 48px;
     font-size: 0.8rem;
     z-index: 2;
     color: $light;
@@ -22,8 +22,10 @@ footer {
 
     .company {
       display: flex;
+      text-align: center;
+      justify-content: center;
       gap: 1rem;
-      width: 8rem;
+      padding-right: 48px;
       height: 2rem;
       overflow: hidden;
 

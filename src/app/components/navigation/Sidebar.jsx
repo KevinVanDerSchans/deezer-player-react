@@ -9,7 +9,7 @@ const Sidebar = () => {
 
       <div className="logoAndSearch">
         <Link href="/" className="logo">
-          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={160} height={40} priority />
+          <Image src="/assets/svg/deezer-logo.svg" alt="Deezer logo" width={148} height={28} priority />
         </Link>
 
         <Search />

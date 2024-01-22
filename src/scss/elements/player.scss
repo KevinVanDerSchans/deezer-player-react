@@ -12,11 +12,11 @@
   background-color: #fff;
   z-index: 9999;
   will-change: transform;
-  animation: slideUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: slideUp 300ms ease-out forwards;
 
   &.disable {
     display: none;
-    animation: slideUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: slideUp 300ms ease-out forwards;
   }
 
   .player-content {

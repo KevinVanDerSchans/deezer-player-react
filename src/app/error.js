@@ -3,15 +3,18 @@
 export default function Error({ reset }) {
   return (
     <div className='error-page'>
-      <h2>Something went wrong!</h2>
+      <div className="error-page-container">
+        <p className="error-page-description">Errors might arise due to restrictions imposed on Deezer API requests.</p>
 
-      <small>
-          For Developers: the occurrence of errors could be due to limitations on
-          <span className='gradient-text'> Deezer API </span>
-          requests.
-      </small>
-
-      <button onClick={ () => reset() }>Try again</button>
+        <div className="error-page-button-container">
+          <button
+            onClick={ () => reset() }
+            className="error-page-button"
+          >
+              Try again
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

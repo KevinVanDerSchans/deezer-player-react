@@ -34,9 +34,56 @@
   }
 }
 
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .error-page-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+
+    .error-page-description {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      font-size: 1.1rem;
+    }
+
+    .error-page-button {
+      width: 6em;
+      padding: 8px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #fff;
+      background-color: $primary;
+    }
+
+    .error-page-button:hover {
+      background-color: $secondary;
+    }
+  }
+}
+
 @media (width < 670px) {
 
-  .error-container {
+  .error-container,
+  .error-page {
     height: 90vh;
+  }
+
+  .error-page {
+    .error-page-container {
+      .error-page-description {
+        padding: 0 40px;
+        font-size: 1rem;
+      }
+    }
   }
 }

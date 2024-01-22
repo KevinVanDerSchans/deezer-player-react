@@ -83,9 +83,14 @@
     }
 
     .favorite-button-container {
-      display: flex;
+      display: none;
+      padding-right: 14px;
     }
   }
+}
+
+.track-list-item:hover .favorite-button-container {
+  display: flex;
 }
 
 .track-list-item:hover .play-icon {

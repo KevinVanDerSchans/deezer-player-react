@@ -13,8 +13,6 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^1.9.5",
-    "framer-motion": "^10.16.8",
-    "jsonwebtoken": "^9.0.2",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -25,6 +23,8 @@
     "react-spinners": "^0.13.8",
     "redux-persist": "^6.0.0",
     "sweetalert2": "^11.10.1",
+    "animate.css": "^4.1.1",
+    "framer-motion": "^10.16.8",
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {

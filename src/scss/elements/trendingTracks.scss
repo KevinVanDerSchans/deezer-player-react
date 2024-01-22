@@ -7,9 +7,10 @@
   .trending-tracks-header {
     width: 100%;
     justify-content: flex-start;
-    font-size: 28px;
+    font-size: 32px;
     color: $dark;
-    padding: 120px 0px 0 30px;
+    padding: 120px 0px 0 48px;
+    cursor: default;
   }
 
   .trending-tracks-container {

@@ -18,7 +18,7 @@ const TopSongs = ({ tracks }) => {
                   track={ track }
                 />
               )
-            };
+            }
           </ul>
         </div>
       </section>

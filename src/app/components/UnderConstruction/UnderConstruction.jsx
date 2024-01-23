@@ -20,7 +20,7 @@ const UnderConstruction = () => {
         </div>
       </article>
     </Reveal>
-  );
+  )
 }
 
 export default UnderConstruction;

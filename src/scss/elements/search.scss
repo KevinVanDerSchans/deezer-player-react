@@ -6,7 +6,7 @@
   position: absolute;
   top: 90%;
   width: 30%;
-  padding: 0.8em 0 0.8em 1em;
+  padding: 0.8em 1em 0.1em 1em;
   outline: none;
   line-height: 20px;
   font-family: inherit;
@@ -37,8 +37,9 @@
   .search-list-item {
     display: flex;
     align-items: center;
-    gap: 1em;
     border-radius: 8px;
+    padding: 6px;
+    gap: 8px;
     outline: none;
     font-weight: $font-weight-medium;
     cursor: pointer;
@@ -82,15 +83,16 @@
 @media (width < 775px) {
 
   .search-results-container {
-    min-width: 22%;
-    z-index: 9999999;
+    min-width: 14em;
+    z-index: 99999;
   }
 }
 
 
-@media (width < 675px) {
+@media (width < 700px) {
 
   .search-results-container {
-    top: 40%;
+    top: 50%;
+    min-width: 10em;
   }
 }

@@ -25,9 +25,9 @@
     align-items: center;
     align-content: center;
     margin: 10px 0;
-    padding: 60px 0 90px 0px;
+    padding: 30px 0 60px 0px;
     box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.1);
-    background-color: #f3eeee;
+    background-image: linear-gradient(to top, #f3eeee, #fff);
 
     .intro-container {
       display: flex;
@@ -36,6 +36,7 @@
       gap: 20px;
 
       .artist-image {
+        pointer-events: none;
         object-fit: cover;
         pointer-events: none;
         border-radius: 8px;

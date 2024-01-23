@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 export default function Error({ reset }) {
   return (
-    <section className='error-page'>
+    <section className="error-page">
       <div className="error-page-container">
         <p className="error-page-description">Errors might arise due to restrictions imposed on Deezer API requests.</p>
 

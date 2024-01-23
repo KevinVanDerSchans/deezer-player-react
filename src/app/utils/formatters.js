@@ -1,7 +1,7 @@
 export const formatDuration = (time) => {
   if (isNaN(time)) {
-    return '00:00';
-  }
+    return "00:00";
+  };
 
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);

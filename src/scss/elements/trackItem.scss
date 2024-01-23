@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   cursor: pointer;
 
   .trending-item-image {
@@ -31,7 +30,8 @@
     pointer-events: none;
   }
 
-  .play-icon {
+  .play-icon,
+  .play-icon.playing {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,32 +47,23 @@
   }
 
   .play-icon.playing {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
     height: 60px;
-    opacity: 0;
-    transition: opacity 0.7s ease;
+    width: 60px;
     background-image: url('/assets/svg/playing.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 
   .trending-track-details {
     display: flex;
-    position: absolute;
     width: 100%;
+    position: absolute;
     justify-content: space-between;
     bottom: 28px;
-    padding: 0 8px;
     left: 0;
-    letter-spacing: 0.8px;
-    color: $light;
     gap: 12px;
+    padding: 0 8px;
+    letter-spacing: 0.8px;
     z-index: 1;
+    color: $white;
 
     .trending-track-details-text {
       display: flex;

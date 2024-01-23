@@ -1,8 +1,8 @@
-import * as Slider from '@radix-ui/react-slider';
+import * as Slider from "@radix-ui/react-slider";
 
 const VolumeSlider = ({ onChange, audioVolume }) => {
   return (
-    <section className='volume-section'>
+    <section className="volume-section">
       <Slider.Root
         className="slider-root"
         orientation="horizontal"
@@ -11,7 +11,7 @@ const VolumeSlider = ({ onChange, audioVolume }) => {
         max={ 1 }
         value={ [audioVolume.isMuted ? 0 : audioVolume.value] }
         onValueChange={ (value) => onChange(value) }
-        aria-label='Volume control'
+        aria-label="Volume control"
       >
       <Slider.Track className="slider-track"
       >
@@ -22,6 +22,6 @@ const VolumeSlider = ({ onChange, audioVolume }) => {
       </Slider.Root>
     </section>
   );
-};
+}
 
 export default VolumeSlider;

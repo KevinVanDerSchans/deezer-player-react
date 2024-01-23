@@ -1,9 +1,9 @@
-'use client';
-import Image from 'next/image';
-import { useState } from 'react';
-import { playSong} from '../../redux/features/songsSlice';
-import { useRouter } from 'next/navigation';
-import { useDispatch } from 'react-redux';
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+import { playSong} from "../../redux/features/songsSlice";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
 
 const SearchResultItem = ({ type, result }) => {
   const router = useRouter();
@@ -13,7 +13,7 @@ const SearchResultItem = ({ type, result }) => {
 
   const handleClick = () => {
 
-    if (type === 'track') {
+    if (type === "track") {
       dispatch(playSong({ playlist: [result], index: 0 }));
 
     } else {
@@ -27,12 +27,12 @@ const SearchResultItem = ({ type, result }) => {
   return (
     <li
       onClick={handleClick}
-      className='search-list-item'
+      className="search-list-item"
       role="button"
       aria-label={`Select ${name || title}`}
     >
       <Image
-        className='search-image'
+        className="search-image"
         src={
           picture_medium || `https://e-cdns-images.dzcdn.net/images/artist/${ md5_image }/1000x1000-000000-80-0-0.jpg`
         }
@@ -41,9 +41,9 @@ const SearchResultItem = ({ type, result }) => {
         height={200}
       />
 
-      <span className='overflowing-text'>{ name || title }</span>
+      <span className="overflowing-text">{ name || title }</span>
     </li>
-  )
+  );
 }
 
 export default SearchResultItem;

@@ -1,18 +1,22 @@
-import Sidebar from './components/navigation/Sidebar';
-import Player from './components/Player/Player';
-import Footer from '../app/components/footer';
-import ReduxProvider from './redux/ReduxProvider';
-import { IBM_Plex_Sans } from 'next/font/google';
-import '../scss/style.scss';
+import Sidebar from "./components/navigation/Sidebar";
+import Player from "./components/Player/Player";
+import Footer from "../app/components/footer";
+import ReduxProvider from "./redux/ReduxProvider";
+import { IBM_Plex_Sans } from "next/font/google";
+import "../scss/style.scss";
 
 const inter = IBM_Plex_Sans({
-  weight: ['400'],
+  weight: ["400"],
   subsets: ["latin"]
 });
 
 export const metadata = {
   title: "Deezer API",
   description: "Deezer API built with Next and React",
+  author: "Kevin van der Schans Delgado",
+  keywords: "Deezer, NextJS, ReactJS, Redux, SWR, Music",
+  image: "/public/assets/readme/project-overview.png",
+  siteName: "Deezer API"
 };
 
 export default function RootLayout({ children }) {

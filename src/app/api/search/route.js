@@ -1,4 +1,4 @@
-import { fetchSearchData } from '../../fetchers';
+import { fetchSearchData } from "../../fetchers";
 
 export async function GET(req) {
   try {
@@ -9,7 +9,8 @@ export async function GET(req) {
       track: tracks.data,
       artist: artists.data,
     });
+
   } catch (error) {
     throw error;
-  }
+  };
 }

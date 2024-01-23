@@ -1,4 +1,4 @@
-import Reveal from '../../utils/reveal';
+import Reveal from "../../utils/reveal";
 
 const TabContentContainer = ({ entities, children }) => {
   const isEmpty = ! entities.length;
@@ -23,7 +23,7 @@ const TabContentContainer = ({ entities, children }) => {
         </>
       }
     </>
-  )
-};
+  );
+}
 
 export default TabContentContainer;

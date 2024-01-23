@@ -1,6 +1,6 @@
-'use client';
-import Image from 'next/image';
-import Reveal from '../../utils/reveal';
+"use client";
+import Image from "next/image";
+import Reveal from "../../utils/reveal";
 
 const UnderConstruction = () => {
   return(
@@ -14,13 +14,13 @@ const UnderConstruction = () => {
             height={180}
           />
 
-          <h1 className='under-construction-title'>Under construction !</h1>
-          <h2 className='under-construction-developers'>Our developers are working on it.</h2>
-          <h3 className='under-construction-apologize'>We apologize for any inconvenience.</h3>
+          <h1 className="under-construction-title">Under construction !</h1>
+          <h2 className="under-construction-developers">Our developers are working on it.</h2>
+          <h3 className="under-construction-apologize">We apologize for any inconvenience.</h3>
         </div>
       </article>
     </Reveal>
-  )
+  );
 }
 
 export default UnderConstruction;

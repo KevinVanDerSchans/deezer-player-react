@@ -8,10 +8,10 @@
     gap: 22px;
 
     .navbar-label {
-      color: $dark;
-      font-weight: $font-weight-bold;
       transition: color 0.25s ease;
       font-size: 18px;
+      color: $black;
+      font-weight: $font-weight-bold;
 
       .navbar-label:active,
       .navbar-label:hover {
@@ -20,8 +20,8 @@
     }
 
     .navbar-discover-label {
-      color: $primary;
       transition: color 0.25s ease;
+      color: $primary;
 
       .navbar-discover-label:active,
       .navbar-discover-label:hover {

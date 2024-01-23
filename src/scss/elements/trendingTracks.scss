@@ -8,10 +8,10 @@
   .trending-tracks-header {
     width: 100%;
     justify-content: flex-start;
-    font-size: 32px;
-    color: $dark;
     padding: 120px 0px 4px 48px;
     cursor: default;
+    font-size: 32px;
+    color: $black;
   }
 
   .trending-tracks-container {
@@ -31,12 +31,11 @@
   .trending-tracks {
 
     .trending-tracks-header {
-      padding: 60px 0px 20px 0;
-      width: 100%;
       display: flex;
       text-align: center;
       justify-content: center;
       text-align: center;
+      padding: 60px 0px 20px 0;
     }
   }
 }

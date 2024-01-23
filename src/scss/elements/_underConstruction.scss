@@ -6,8 +6,8 @@
 
   .under-construction-section {
     display: flex;
+    position: relative;
     padding: 40px;
-    box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.12);
 
     .under-construction-container {
       display: flex;
@@ -17,6 +17,8 @@
       text-align: center;
       align-items: center;
       gap: 30px;
+      padding: 40px;
+      box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.12);
 
       .under-construction-title {
         color: $primary;

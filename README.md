@@ -160,7 +160,7 @@ https://deezer-player-react.vercel.app
 
 <br>
 
-## Lighthouse results
+## Lighthouse Results
 
 <div align="center">
   <img
@@ -225,7 +225,7 @@ If you want to contribute to this project, follow these steps:
 
 <br>
 
-## Project status
+## Project Status
 
 <br>
 
@@ -233,7 +233,7 @@ If you want to contribute to this project, follow these steps:
 
 <br>
 
-## Project developer
+## Project Developer
 
 <br>
 

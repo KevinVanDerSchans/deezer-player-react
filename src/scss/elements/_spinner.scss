@@ -9,3 +9,16 @@
     display: flex;
   }
 }
+
+@media (width < 500) {
+
+  .spinner-container {
+    height: 60vh;
+
+    .spinner {
+      font-size: 0.8rem;
+      width: 20em;
+    }
+  }
+}
+

@@ -2,7 +2,7 @@ import TrendingTracks from "../app/components/TrendingTracks/TrendingTracks";
 import { fetchTopTracks } from "../app/fetchers"
 
 export default async function Home() {
-  const tracks = await fetchTopTracks({ limit: 20 })
+  const tracks = await fetchTopTracks({ limit: 12 })
 
   return (
     <div>

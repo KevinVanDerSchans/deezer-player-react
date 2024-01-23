@@ -13,7 +13,9 @@ const SearchResults = ({ query }) => {
       {
         query &&
           <div className='search-results-container'>
-            { isLoading && <span>Loading...</span> }
+            <div>
+              { isLoading && <span className='search-loading'>Loading...</span> }
+            </div>
 
             { error && <span>Error. Try again later please.</span> }
 

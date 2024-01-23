@@ -5,10 +5,14 @@ const TabContentContainer = ({ entities, children }) => {
     <>
       {
         isEmpty ?
-          <div className="empty-list">
-            <h2>Empty List !</h2>
-            <h3>Explore the APP</h3>
-          </div>
+          <section className="empty-list-section">
+            <div className="empty-list-container">
+              <h2 className="empty-list-title">Empty favorites !</h2>
+              <h3 className="empty-list-description">
+                Browse the <strong>APP</strong> and search for your favorite <strong>songs</strong> !
+              </h3>
+            </div>
+          </section>
         :
         <>
           { children }

@@ -15,7 +15,9 @@ export default function ErrorPage() {
         <h1 className='not-found-title'>Page not found</h1>
         <h2 className='not-found-description'>
           Return to
-            <span className='not-found-link-home'><Link href="/">Home</Link></span>
+            <Link href="/">
+              <span className='not-found-link-home'>Home</span>
+            </Link>
         </h2>
       </div>
     </section>

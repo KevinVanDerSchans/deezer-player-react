@@ -5,22 +5,26 @@ const ArtistsTabContent = ({ artists }) => {
   const { data } = useSWR({ entitiesIds: artists, endpoint: '/api/artist' });
 
   return (
-    <ul>
-      {
-        data.map((artist => {
-          const { id, name, picture_medium } = artist;
+    <section className='favorite-artist-section'>
+      <div className='favorite-artist-container'>
+        <ul className='favorite-artist-list'>
+          {
+            data.map((artist => {
+              const { id, name, picture_medium } = artist;
 
-          return (
-            <LinkCardItem
-              key={ id }
-              title={ name }
-              imgSrc= { picture_medium }
-              href={ `/artist/${ id }` }
-            />
-          );
-        }))
-      }
-    </ul>
+              return (
+                <LinkCardItem
+                  key={ id }
+                  title={ name }
+                  imgSrc= { picture_medium }
+                  href={ `/artist/${ id }` }
+                />
+              );
+            }))
+          }
+        </ul>
+      </div>
+    </section>
   );
 };
 

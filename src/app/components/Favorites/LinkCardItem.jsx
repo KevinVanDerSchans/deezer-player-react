@@ -4,20 +4,20 @@ import React from 'react';
 
 const LinkCardItem = ({ href, imgSrc, title, description }) => {
   return (
-    <li className='card-container'>
-      <Link href={ href }>
-        <Image
-          src={ imgSrc }
-          alt="Artist"
-          width={200}
-          height={200}
-        />
-        <strong>{ title }</strong>
+    <li className='artist-card-item'>
 
-        {
-          description &&
-            <small>{ description }</small>
-        }
+      <Link href={ href }>
+        <div className='artist-card'>
+          <Image
+            src={ imgSrc }
+            className='artist-image'
+            alt="Artist"
+            width={200}
+            height={200}
+          />
+
+          <span className='artist-title'>{ title }</span>
+        </div>
       </Link>
     </li>
   );

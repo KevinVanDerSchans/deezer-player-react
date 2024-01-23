@@ -30,8 +30,9 @@
 
       .song-album {
         width: 80px;
-        height: 80px;
+        max-height: 80px;
         border-radius: 8px;
+        object-fit: cover;
       }
 
       .song-details {

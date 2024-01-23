@@ -3,7 +3,6 @@ import IntroContainer from '../../components/IntroContainer/IntroContainer';
 import TopSongs from '../../components/TopSongs/TopSongs';
 
 const ArtistPage = async ({ params: { id } }) => {
-
   try {
     const artistPromise = fetchArtist(id);
     const topTracksPromise = fetchArtistTopTracks(id);
@@ -17,7 +16,9 @@ const ArtistPage = async ({ params: { id } }) => {
             Search results for: <span className='artist-name'>{ artist.name}</span>
           </h1>
 
-          <TopSongs header='Top Songs' tracks={ topTracks } />
+          <div className='artist-top-songs-container'>
+            <TopSongs header='Top Songs' tracks={ topTracks } />
+          </div>
 
           <div className='artist'>
             <IntroContainer

@@ -4,7 +4,7 @@
   padding-top: 120px;
 
   .artist-results {
-    padding-left: 40px;
+    padding-left: 50px;
     font-size: 32px;
     cursor: default;
 
@@ -14,11 +14,20 @@
     }
   }
 
+  .artist-top-songs-container {
+    padding-top: 14px;
+  }
+
   .artist {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 20px 0 80px 0;
+    align-items: center;
+    align-content: center;
+    margin: 10px 0;
+    padding: 60px 0 90px 0px;
+    box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.1);
+    background-color: #f3eeee;
 
     .intro-container {
       display: flex;
@@ -27,6 +36,7 @@
       gap: 20px;
 
       .artist-image {
+        object-fit: cover;
         pointer-events: none;
         border-radius: 8px;
       }
@@ -95,6 +105,85 @@
 
       .artist-results {
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.favorite-artist-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .favorite-artist-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    padding: 120px 48px 10px;
+
+    .favorite-artist-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.4rem;
+
+      .artist-card-item {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+
+        .artist-card {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+
+          .artist-image {
+            border-radius: 50%;
+          }
+
+          .artist-title {
+            font-size: 1.2rem;
+            color: $primary;
+            font-weight: $font-weight-bold;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.artist-card-item:hover {
+
+  .artist-image {
+    opacity: 0.8;
+  }
+}
+
+@media (width < 560px) {
+
+  .favorite-artist-section {
+
+    .favorite-artist-container {
+
+      .favorite-artist-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+
+        .artist-card-item {
+
+          .artist-card {
+            .artist-title {
+              font-size: 1.4rem;
+            }
+          }
+        }
       }
     }
   }

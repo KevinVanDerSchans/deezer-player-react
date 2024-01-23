@@ -6,7 +6,7 @@
 
   .not-found-page-container {
     display: flex;
-    padding: 40px;
+    padding: 40px 60px;
     box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.12);
     flex-direction: column;
     justify-content: center;
@@ -30,6 +30,10 @@
     .not-found-link-home {
       color: $secondary;
       font-weight: $font-weight-bold;
+    }
+
+    .not-found-link-home:hover {
+      color: $primary;
     }
   }
 }

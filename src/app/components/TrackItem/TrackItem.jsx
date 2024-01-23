@@ -21,6 +21,7 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
         className='trending-item-image'
         width={312}
         height={312}
+        priority
       />
 
       <div className='play-icon'></div>

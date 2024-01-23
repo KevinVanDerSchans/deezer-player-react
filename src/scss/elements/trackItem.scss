@@ -46,6 +46,21 @@
     background-repeat: no-repeat;
   }
 
+  .play-icon.playing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    background-image: url('/assets/svg/playing.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .trending-track-details {
     display: flex;
     position: absolute;

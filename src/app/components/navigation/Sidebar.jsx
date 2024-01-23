@@ -1,9 +1,31 @@
+'use client';
 import NavLink from './NavLink';
 import Image from "next/image";
 import Link from 'next/link';
 import Search from '../search/Search';
+import Swal from 'sweetalert2';
 
 const Sidebar = () => {
+
+  const userIconFeedback = () => {
+    Swal.fire({
+      position: "center",
+      icon: "warning",
+      iconColor: '#efecec',
+      color: '#e4e0e0',
+      title: "Available in the following version !",
+      showConfirmButton: false,
+      timer: 3000,
+      customClass: {
+        container: 'custom-swal-container',
+      },
+      didOpen: () => {
+        Swal.getPopup().style.background = 'linear-gradient(to bottom, #e7969f, #EF5466)';
+        Swal.getTitle().style.fontSize = '1.2rem';
+      }
+    });
+  }
+
   return (
     <header className="header" id="header">
 
@@ -54,8 +76,16 @@ const Sidebar = () => {
           </nav>
         </div>
 
-        <div className="user-icon-container">
-          <Image src='/assets/svg/user-icon.svg' alt='User icon' width={50} height={50} />
+        <div
+          className="user-icon-container"
+          onClick={userIconFeedback}
+        >
+          <Image
+            src='/assets/svg/user-icon.svg'
+            alt='User icon'
+            width={50}
+            height={50}
+          />
         </div>
 
       </nav>

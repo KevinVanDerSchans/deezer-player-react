@@ -33,3 +33,26 @@
     }
   }
 }
+
+@media (width < 600px) {
+
+  .discover-container {
+
+
+    .under-construction-section {
+      padding-bottom: 120px;
+
+      .under-construction-container {
+
+        .under-construction-title {
+          font-size: 1.2rem;
+        }
+
+        .under-construction-developers,
+        .under-construction-apologize {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

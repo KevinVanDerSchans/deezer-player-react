@@ -27,7 +27,7 @@ const IntroContainer = ({ id, imgSrc, title, playlist, type }) => {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default IntroContainer;

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const LinkCardItem = ({ href, imgSrc, title, description }) => {
+const LinkCardItem = ({ href, imgSrc, title }) => {
   return (
     <li className='artist-card-item'>
 

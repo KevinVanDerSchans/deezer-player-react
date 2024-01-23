@@ -2,29 +2,29 @@
   display: flex;
   align-items: center;
 
-  .navbarList {
+  .navbar-list {
     display: flex;
     flex-direction: row;
     gap: 22px;
 
-    .navbarLabel {
+    .navbar-label {
       color: $dark;
       font-weight: $font-weight-bold;
       transition: color 0.25s ease;
       font-size: 18px;
 
-      .navbarLabel:active,
-      .navbarLabel:hover {
+      .navbar-label:active,
+      .navbar-label:hover {
         color: $primary;
       }
     }
 
-    .navbarDiscoverLabel {
+    .navbar-discover-label {
       color: $primary;
       transition: color 0.25s ease;
 
-      .navbarDiscoverLabel:active,
-      .navbarDiscoverLabel:hover {
+      .navbar-discover-label:active,
+      .navbar-discover-label:hover {
         color: $secondary;
       }
     }
@@ -35,7 +35,7 @@
 
   .navbar {
 
-    .navbarList {
+    .navbar-list {
       gap: 8px;
     }
   }

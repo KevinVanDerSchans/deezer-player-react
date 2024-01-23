@@ -23,8 +23,8 @@ const Search = () => {
   return (
     <div className="searcher">
       <form>
-        <label className="searchLabel">
-          <div className="lensContainer">
+        <label className="search-label">
+          <div className="lens-container">
             <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={19} height={19} />
           </div>
 
@@ -32,7 +32,7 @@ const Search = () => {
             type="text"
             placeholder="Search artists"
             title='Write your favorite artist'
-            className="searchInput"
+            className="search-input"
             value={ searchQuery }
             onChange={ (e) => setSearchQuery(e.target.value) }
           />

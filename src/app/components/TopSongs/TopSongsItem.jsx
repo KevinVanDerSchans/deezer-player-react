@@ -12,11 +12,13 @@ const TopSongsItem = ({ index, playlist, track: { id, title, artist, album, type
     <li
       className='track-list-item'
       onClick={ () => dispatch(playSong({index, playlist})) }
+      role="button"
+      aria-label={`Play ${title} by ${artist.name}`}
     >
       <div className='track-list-item-container'>
         <Image
           src={ album.cover_medium }
-          alt=""
+          alt={`${title} by ${artist.name}`}
           className='trending-item-image'
           width={340}
           height={280}

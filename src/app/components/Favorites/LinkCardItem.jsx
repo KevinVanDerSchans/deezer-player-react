@@ -9,7 +9,7 @@ const LinkCardItem = ({ href, imgSrc, title }) => {
       <li className='artist-card-item'>
 
         <Link href={ href }>
-          <div className='artist-card'>
+          <article className='artist-card'>
             <Image
               src={ imgSrc }
               className='artist-image'
@@ -19,7 +19,7 @@ const LinkCardItem = ({ href, imgSrc, title }) => {
             />
 
             <span className='artist-title'>{ title }</span>
-          </div>
+          </article>
         </Link>
       </li>
     </Reveal>

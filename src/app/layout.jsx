@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
           <div>
             <Sidebar />
 
-            <div>
+            <section>
               <main>
                 {children}
               </main>
-            </div>
+            </section>
 
             <Player />
             <Footer />

@@ -3,9 +3,10 @@ import Image from 'next/image';
 
 const Spinner = () => {
   return (
-    <div className='spinner-container'>
-      <Image src='assets/svg/spinner.svg' width={200} height={200} alt='Spinner' className='spinner'/>
-    </div>
+    <section className='spinner-container' role='status' aria-live='polite' aria-busy='true'>
+      <Image src='assets/svg/spinner.svg' width={200} height={200} alt='Loading...' className='spinner'/>
+      <span className='hidden'>Loading data...</span>
+    </section>
   );
 };
 

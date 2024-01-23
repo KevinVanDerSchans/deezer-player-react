@@ -12,11 +12,13 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
     <li
       className='track-list-item'
       onClick={ () => dispatch(playSong({index, playlist})) }
+      role='button'
+      aria-label={`Play the son ${title} by ${artist.name}`}
     >
 
       <Image
         src={ album.cover_medium }
-        alt=""
+        alt={`${title} album cover`}
         className='trending-item-image'
         width={312}
         height={312}

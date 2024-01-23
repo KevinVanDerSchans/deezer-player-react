@@ -8,7 +8,7 @@ const IntroContainer = ({ id, imgSrc, title, description, playlist, type }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className='intro-container'>
+    <section className='intro-container'>
       <Image src={ imgSrc } alt="Artist" className="artist-image" width={200} height={200}/>
 
       <div className='intro-details'>
@@ -18,6 +18,7 @@ const IntroContainer = ({ id, imgSrc, title, description, playlist, type }) => {
           <button
             className='play-button'
             onClick={ () => dispatch(playSong({ playlist, index: 0 })) }
+            aria-label={`Play ${title}`}
           >
             <span>Play</span>
           </button>
@@ -25,7 +26,7 @@ const IntroContainer = ({ id, imgSrc, title, description, playlist, type }) => {
           <FavoriteButton type={ type } id={ id } className='artist-favorite-button' />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

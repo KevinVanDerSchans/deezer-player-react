@@ -7,7 +7,7 @@ import Spinner from '../spinner';
 
 const LibraryPage = () => {
   return (
-    <div className='library-section'>
+    <section className='library-section'>
       <Tabs.Root
         className='tabs-container'
         defaultValue='tracks'
@@ -41,7 +41,7 @@ const LibraryPage = () => {
           </SWRConfig>
         </Suspense>
       </Tabs.Root>
-    </div>
+    </section>
   )
 }
 

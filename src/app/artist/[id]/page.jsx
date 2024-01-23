@@ -31,11 +31,11 @@ const ArtistPage = async ({ params: { id } }) => {
           </div>
         </div>
       </section>
-    );
+    )
 
   } catch(error) {
     throw error;
-  };
+  }
 }
 
 export default ArtistPage;

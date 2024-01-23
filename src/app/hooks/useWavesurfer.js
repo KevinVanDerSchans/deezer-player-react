@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
-import WaveSurfer from 'wavesurfer.js';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useRef, useState } from "react";
+import WaveSurfer from "wavesurfer.js";
 
 const options = {
-  waveColor: '#ccc',
-  progressColor: '#EF5466',
+  waveColor: "#ccc",
+  progressColor: "#EF5466",
   fillParent: true,
   responsive: true,
   autoplay: true,
@@ -25,9 +26,9 @@ const useWavesurfer = (waveContainerRef, audioSrc, onFinish) => {
       height: waveContainerRef.current.clientHeight,
     });
 
-    waveSurferRef.current.on('play', () => setIsPlaying(true));
-    waveSurferRef.current.on('pause', () => setIsPlaying(false));
-    waveSurferRef.current.on('finish', () => onFinish());
+    waveSurferRef.current.on("play", () => setIsPlaying(true));
+    waveSurferRef.current.on("pause", () => setIsPlaying(false));
+    waveSurferRef.current.on("finish", () => onFinish());
 
     waveSurferRef.current.setVolume(audioVolume.isMuted ? 0 : audioVolume.value);
 

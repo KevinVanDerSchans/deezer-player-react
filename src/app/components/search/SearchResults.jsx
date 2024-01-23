@@ -1,6 +1,6 @@
-'use client';
-import useSWR from 'swr';
-import SearchResultItem from './SearchResultItem';
+"use client";
+import useSWR from "swr";
+import SearchResultItem from "./SearchResultItem";
 
 const SearchResults = ({ query }) => {
   const { data: resultsObj = {}, error, isLoading } = useSWR(query, async () => {
@@ -12,9 +12,9 @@ const SearchResults = ({ query }) => {
     <>
       {
         query &&
-          <div className='search-results-container'>
+          <div className="search-results-container">
             <div>
-              { isLoading && <span className='search-loading'>Loading...</span> }
+              { isLoading && <span className="search-loading">Loading...</span> }
             </div>
 
             { error && <span>Error. Try again later please.</span> }
@@ -23,12 +23,12 @@ const SearchResults = ({ query }) => {
               Object.keys(resultsObj).map(type => {
                 return (
                   <div key={ type }>
-                    <span className='search-title'>{ type + 's' }</span>
+                    <span className="search-title">{ type + "s" }</span>
 
-                    <ul className='search-list'>
+                    <ul className="search-list">
                       {
                         ! resultsObj[type].length ?
-                          <span className='search-no-results'>No results found.</span>
+                          <span className="search-no-results">No results found.</span>
 
                         :
                           resultsObj[type].map(result =>
@@ -47,7 +47,7 @@ const SearchResults = ({ query }) => {
         </div>
       }
     </>
-  )
+  );
 }
 
 export default SearchResults;

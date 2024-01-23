@@ -4,7 +4,7 @@
 $font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: black) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: linear-gradient($dark, $dark-accent, $dark);
+  background: linear-gradient($black, $grey, $black);
 }
 
 body::-webkit-scrollbar-thumb {

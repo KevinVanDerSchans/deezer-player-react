@@ -11,7 +11,7 @@
   line-height: 20px;
   font-family: inherit;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid #0000001A;
   border-top: none;
   box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.12);
@@ -41,22 +41,22 @@
     padding: 6px;
     gap: 8px;
     outline: none;
-    font-weight: $font-weight-medium;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: $font-weight-medium;
   }
 
   .search-list-item:hover {
-    color: #fff;
+    color: $white;
     background-color: #EF5466;
   }
 
   .search-title {
     display: flex;
-    font-weight: $font-weight-bold;
-    color: $primary;
-    font-size: 1.1rem;
     margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: $primary;
+    font-weight: $font-weight-bold;
   }
 
   .search-no-results {

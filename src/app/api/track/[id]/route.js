@@ -1,4 +1,4 @@
-import { fetchTrack } from '../../../fetchers';
+import { fetchTrack } from "../../../fetchers";
 
 export async function GET(req, { params }) {
   try {
@@ -6,7 +6,8 @@ export async function GET(req, { params }) {
 
     return Response.json(data);
   }
+
   catch(error) {
     throw error;
-  }
+  };
 }

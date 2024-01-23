@@ -50,9 +50,9 @@
         gap: 10px;
 
         .artist-name {
+          cursor: default;
           font-size: 1.2rem;
           font-weight: $font-weight-bold;
-          cursor: default;
         }
 
         .intro-buttons {
@@ -62,14 +62,14 @@
           gap: 6px;
 
           .play-button {
-            font-size: 1.2rem;
             padding: 8px 12px;
             border-radius: 8px;
             font-family: inherit;
             border: none;
             outline: none;
             cursor: pointer;
-            color: #fff;
+            font-size: 1.2rem;
+            color: $white;
             font-weight: $font-weight-medium;
             background-color: $primary;
           }
@@ -116,11 +116,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 
   .favorite-artist-container {
     display: flex;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
     gap: 30px;
     padding: 120px 48px 10px;
 

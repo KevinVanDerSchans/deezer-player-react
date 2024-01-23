@@ -1,20 +1,20 @@
-'use client';
-import { SWRConfig } from 'swr';
-import * as Tabs from '@radix-ui/react-tabs';
-import TabsContainer from '../components/Favorites/TabsContainer';
-import { Suspense } from 'react';
-import Spinner from '../spinner';
+"use client";
+import { SWRConfig } from "swr";
+import * as Tabs from "@radix-ui/react-tabs";
+import TabsContainer from "../components/Favorites/TabsContainer";
+import { Suspense } from "react";
+import Spinner from "../spinner";
 
 const LibraryPage = () => {
   return (
-    <section className='library-section'>
+    <section className="library-section">
       <Tabs.Root
-        className='tabs-container'
-        defaultValue='tracks'
+        className="tabs-container"
+        defaultValue="tracks"
       >
-        <Tabs.List className='tabs-list'>
-          <Tabs.Trigger value='tracks' className='tabs-list-title'>Tracks</Tabs.Trigger>
-          <Tabs.Trigger value='artists' className='tabs-list-title'>Artists</Tabs.Trigger>
+        <Tabs.List className="tabs-list">
+          <Tabs.Trigger value="tracks" className="tabs-list-title">Tracks</Tabs.Trigger>
+          <Tabs.Trigger value="artists" className="tabs-list-title">Artists</Tabs.Trigger>
         </Tabs.List>
 
         <Suspense fallback={ <Spinner /> }>
@@ -23,7 +23,7 @@ const LibraryPage = () => {
               fetcher: async ({ entitiesIds, endpoint }) => {
                 try {
                   const promises = entitiesIds.map(async (id) => {
-                    const res = await fetch(endpoint + '/' + id);
+                    const res = await fetch(endpoint + "/" + id);
 
                     return res.json();
                   });

@@ -1,5 +1,5 @@
-import { motion, useAnimation, useInView } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function Reveal(props) {
   const {
@@ -20,17 +20,17 @@ export default function Reveal(props) {
 
   useEffect(() => {
     if (isInView) {
-      mainControls.start('visible');
+      mainControls.start("visible");
     }
   }, [isInView, mainControls]);
 
   return (
     <motion.div
       ref={ref}
-      style={{ position: 'relative', overflow: 'hidden' }}
+      style={{ position: "relative", overflow: "hidden" }}
       variants={{
         hidden: { filter: `blur(${blur}px)`, opacity, y, x, rotate },
-        visible: { filter: 'blur(0)', opacity: 1, y: 0, x: 0, rotate: 0 },
+        visible: { filter: "blur(0)", opacity: 1, y: 0, x: 0, rotate: 0 },
       }}
       initial="hidden"
       animate={mainControls}

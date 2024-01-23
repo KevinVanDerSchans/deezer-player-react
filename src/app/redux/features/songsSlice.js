@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const songsSlice = createSlice({
-  name: 'songs',
+  name: "songs",
   initialState,
   reducers: {
     playSong(state, action) {

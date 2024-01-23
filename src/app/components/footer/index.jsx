@@ -1,12 +1,12 @@
-import { AiFillLinkedin } from 'react-icons/ai';
+import { AiFillLinkedin } from "react-icons/ai";
 import { TbSquareLetterD } from "react-icons/tb";
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <main>
-        <section className='rrss'>
+        <section className="rrss">
           <a
             href="https://github.com/KevinVanDerSchans/deezer-player-react"
             target="_blank"
@@ -38,8 +38,7 @@ const Footer = () => {
         </div>
       </main>
     </footer>
-  )
+  );
 }
-
 
 export default Footer;

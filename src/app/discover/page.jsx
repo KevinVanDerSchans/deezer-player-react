@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import UnderConstruction from "../components/UnderConstruction/UnderConstruction";
 
 const DiscoverPage = () => {
@@ -6,7 +6,7 @@ const DiscoverPage = () => {
     <section className="discover-container">
       <UnderConstruction />
     </section>
-  )
+  );
 }
 
 export default DiscoverPage;

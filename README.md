@@ -1,6 +1,6 @@
 # Deezer API
 
-## NextJS / React (Redux & SWR)
+## NextJS / ReactJS (Redux & SWR)
 
 <br>
 
@@ -33,7 +33,7 @@ https://deezer-player-react.vercel.app
 
 # Index
 
-1. [Project title and deployment link](#deezer-api)
+1. [Project Title and Deployment Link](#deezer-api)
 
 2. [Features](#features)
 
@@ -41,15 +41,15 @@ https://deezer-player-react.vercel.app
 
 4. [Technologies and Tools used](#technologies-and-tools-used)
 
-5. [Lighthouse results](#lighthouse-results)
+5. [Lighthouse Results](#lighthouse-results)
 
 6. [Project Setup](#project-setup)
 
 7. [Contribution](#contribution)
 
-8. [Project status](#project-status)
+8. [Project Status](#project-status)
 
-9. [Project developer](#project-developer)
+9. [Project Developer](#project-developer)
 
 <br>
 
@@ -61,15 +61,17 @@ https://deezer-player-react.vercel.app
 
     ✔️ Search Engine for Tracks and Artists
 
-    ✔️ Audio Player with Playback Controls
+    ✔️ Music Player with Playback Controls
 
     ✔️ Library for Adding or Removing Favorite Tracks and/or Artists
 
-    ✔️ SCSS palette with custom variables
-
-    ✔️ Flexbox and grid layouts
+    ✔️ Error handling
 
     ✔️ Responsive design
+
+    ✔️ SCSS with custom variables
+
+    ✔️ Flexbox and grid layouts
 
     ✔️ User feedbacks
 
@@ -82,8 +84,8 @@ https://deezer-player-react.vercel.app
 <div>
 
     ⚛️ SEARCH ENGINE
-        - TRACKS: 3 ítems to choose from, and the selected one will play in the PLAYER
-        - ARTISTS: 3 related artists displayed, selecting one will navigate to their respective section
+        - TRACKS: 3 items to choose from, and the selected one will play in the PLAYER
+        - ARTISTS: 3 related artists listed, selecting one navigates to their page dynamically
 
     ⚛️ ARTIST PAGE
         - Displays the artist's top 5 tracks, with the option to play them
@@ -106,7 +108,7 @@ https://deezer-player-react.vercel.app
     ⚛️ TRACK
         - Track title
         - Artist name
-        - Type of ítem
+        - Type of item
         - Album cover
         - Favorite icon to Add or Remove from Library
 

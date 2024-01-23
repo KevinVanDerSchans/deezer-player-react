@@ -7,5 +7,5 @@ export async function GET(req, { params }) {
 
   } catch (error) {
     throw error;
-  }
+  };
 }

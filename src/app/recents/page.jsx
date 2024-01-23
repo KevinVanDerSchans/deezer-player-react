@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import UnderConstruction from "../components/UnderConstruction/UnderConstruction";
 
 const RecentsPage = () => {
@@ -6,7 +6,7 @@ const RecentsPage = () => {
     <section className="discover-container">
       <UnderConstruction />
     </section>
-  )
+  );
 }
 
 export default RecentsPage;

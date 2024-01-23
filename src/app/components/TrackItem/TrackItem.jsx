@@ -1,20 +1,30 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { playSong } from '../../redux/features/songsSlice';
 import FavoriteButton from '../Favorites/FavoriteButton';
 
 const TrackListItem = ({ index, playlist, track: { id, title, artist, album, type } }) => {
   const dispatch = useDispatch();
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+    dispatch(playSong({ index, playlist }));
+
+    setTimeout(() => {
+      setIsPlaying(false);
+    }, 1500);
+  };
 
   return (
     <li
       className='track-list-item'
-      onClick={ () => dispatch(playSong({index, playlist})) }
+      onClick={handlePlayClick}
       aria-label={`Play the son ${title} by ${artist.name}`}
     >
-
       <Image
         src={ album.cover_medium }
         alt={`${title} album cover`}
@@ -24,7 +34,7 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
         priority
       />
 
-      <div className='play-icon'></div>
+      <div className={`play-icon ${isPlaying ? 'playing' : ''}`} />
 
       <div className='trending-track-details'>
 

@@ -24,8 +24,8 @@ const FavoriteButton = ({ type, id }) => {
       Swal.fire({
         position: "bottom-end",
         icon: "info",
-        iconColor: '#000033',
-        color: '#000000',
+        iconColor: '#efecec',
+        color: '#e4e0e0',
         title: "Removed from Library",
         showConfirmButton: false,
         timer: 1500,
@@ -44,8 +44,8 @@ const FavoriteButton = ({ type, id }) => {
       Swal.fire({
         position: "bottom-end",
         icon: "info",
-        iconColor: '#000033',
-        color: '#000000',
+        iconColor: '#efecec',
+        color: '#e4e0e0',
         title: "Added to Library",
         showConfirmButton: false,
         timer: 1500,

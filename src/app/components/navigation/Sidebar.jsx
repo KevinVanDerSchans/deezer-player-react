@@ -8,7 +8,7 @@ const Sidebar = () => {
     <header className="header" id="header">
 
       <div className="logo-and-search">
-        <Link href="/" className="logo">
+        <Link href="/" className="logo" passHref>
           <Image
             className='logo'
             src="/assets/svg/deezer-logo.svg"
@@ -22,31 +22,31 @@ const Sidebar = () => {
         <Search />
       </div>
 
-      <div className="navigation">
+      <nav className="navigation">
         <div className='navbar'>
           <nav>
             <ul className='navbar-list'>
 
               <li className='navbar-label'>
-                <NavLink slug=''>
+                <NavLink slug='' aria-label='Home'>
                   <span className='navbar-label'>Home</span>
                 </NavLink>
               </li>
 
               <li className='navbar-label'>
-                <NavLink slug='discover'>
+                <NavLink slug='discover' aria-label='Discover'>
                   <span className='navbar-discover-label'>Discover</span>
                 </NavLink>
               </li>
 
               <li className='navbar-label'>
-                <NavLink slug='recents'>
+                <NavLink slug='recents' aria-label='Recents'>
                   <span className='navbar-label'>Recents</span>
                 </NavLink>
               </li>
 
               <li className='navbar-label'>
-                <NavLink slug='library'>
+                <NavLink slug='library' aria-label='Library'>
                   <span className='navbar-label'>Library</span>
                 </NavLink>
               </li>
@@ -58,7 +58,7 @@ const Sidebar = () => {
           <Image src='/assets/svg/user-icon.svg' alt='User icon' width={50} height={50} />
         </div>
 
-      </div>
+      </nav>
     </header>
   );
 };

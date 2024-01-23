@@ -21,14 +21,15 @@ const Search = () => {
   }, []);
 
   return (
-    <div className="searcher">
-      <form>
-        <label className="search-label">
+    <section className="searcher">
+      <form role="search">
+        <label htmlFor="search-input" className="search-label">
           <div className="lens-container">
             <Image src='/assets/svg/lens.svg' alt='Lens for song search' className="lens" width={19} height={19} />
           </div>
 
           <input
+            id="search-input"
             type="text"
             placeholder="Search artists"
             title='Write your favorite artist'
@@ -40,7 +41,7 @@ const Search = () => {
           <SearchResults query={ searchQuery }/>
         </label>
       </form>
-    </div>
+    </section>
   )
 }
 

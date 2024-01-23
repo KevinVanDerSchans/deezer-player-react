@@ -28,6 +28,8 @@ const SearchResultItem = ({ type, result }) => {
     <li
       onClick={handleClick}
       className='search-list-item'
+      role="button"
+      aria-label={`Select ${name || title}`}
     >
       <Image
         className='search-image'

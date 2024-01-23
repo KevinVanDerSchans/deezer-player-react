@@ -5,11 +5,11 @@ export default async function Home() {
   const tracks = await fetchTopTracks({ limit: 12 })
 
   return (
-    <div>
+    <main>
       <TrendingTracks
         header="Trending hits:"
         tracks={ tracks }
       />
-    </div>
+    </main>
   );
 }

@@ -17,29 +17,34 @@ const Player = () => {
 
   return (
     <>
-      <div className={ audioSrc ? 'player' : 'player disable' }>
+      <aside className={ audioSrc ? 'player' : 'player disable' }>
         <div className='player-content'>
 
-          <div className="song-data">
+          <figure className="song-data">
             <img className='song-album' src={ album?.cover_small } alt='Album cover' />
 
-            <div className='song-details'>
+            <figcaption className='song-details'>
               <span className='song-title'>{ title_short }</span>
               <span className='artist-name'>{ artist?.name }</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
           <div className='control-buttons'>
             <div className="controls">
 
               <div className='buttons'>
-                <button onClick={ () => dispatch(playPreviousSong()) } className='previous-button'>
+                <button
+                  onClick={ () => dispatch(playPreviousSong()) }
+                  className='previous-button'
+                  aria-label='Play previous role'
+                >
                   <MdSkipPrevious />
                 </button>
 
                 <button
                   className='play-button'
                   onClick={ audioSrc && handlePlayPause }
+                  aria-label={isPlaying ? "Pause" : "Play"}
                 >
                   {
                     isPlaying ?
@@ -48,7 +53,11 @@ const Player = () => {
                   }
                 </button>
 
-                <button onClick={ () => dispatch(playNextSong()) } className='next-button'>
+                <button
+                  onClick={ () => dispatch(playNextSong()) }
+                  className='next-button'
+                  aria-label="Play next song"
+                >
                   <MdSkipNext />
                 </button>
               </div>
@@ -60,13 +69,15 @@ const Player = () => {
             </div>
           </div>
 
-          <div className='volume-section-container'>
+          <section className='volume-section-container'>
             <div className='volume-slider-container'>
               <div className='volume'>
 
                 <button
                   className='volume-button'
-                  onClick={ () => setAudioVolume((prev) => ({ ...prev, isMuted: prev.value <= 0 ? true : ! prev.isMuted })) }>
+                  onClick={ () => setAudioVolume((prev) => ({ ...prev, isMuted: prev.value <= 0 ? true : ! prev.isMuted })) }
+                  aria-label={audioVolume.isMuted ? "Unmute" : "Mute"}
+                >
                   {
                     audioVolume.isMuted
                       ? <MdVolumeMute />
@@ -85,9 +96,9 @@ const Player = () => {
                 }
               </div>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </aside>
     </>
   );
 };

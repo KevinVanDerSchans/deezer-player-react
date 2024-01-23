@@ -10,6 +10,7 @@ const Footer = () => {
           <a
             href="https://github.com/KevinVanDerSchans/deezer-player-react"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="GitHub Link"
           >
             <FaGithub />
@@ -17,6 +18,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/company/deezer"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn Link"
           >
             <AiFillLinkedin />
@@ -24,15 +26,16 @@ const Footer = () => {
           <a
             href="https://www.deezer.com/en"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Deezer website Link"
           >
             <TbSquareLetterD />
           </a>
         </section>
 
-        <section className="company">
+        <div className="company">
           <address>Deezer © 2024</address>
-        </section>
+        </div>
       </main>
     </footer>
   )

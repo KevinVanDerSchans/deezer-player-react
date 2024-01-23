@@ -7,9 +7,9 @@ const TrendingTracks = ({ header, tracks }) => {
     <Reveal duration={1} delay={0.2} y={50}>
       <section className="trending-tracks">
 
-        <div className='trending-tracks-header'>
+        <header className='trending-tracks-header'>
           { !! header && <h1>{ header }</h1> }
-        </div>
+        </header>
 
         <div className='trending-tracks-container'>
           <ul className='trending-tracks-list'>

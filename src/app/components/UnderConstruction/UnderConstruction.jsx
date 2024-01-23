@@ -5,7 +5,7 @@ import Reveal from '../../utils/reveal';
 const UnderConstruction = () => {
   return(
     <Reveal duration={1.5} delay={0.2} y={100}>
-      <section className="under-construction-section">
+      <article className="under-construction-section">
         <div className="under-construction-container">
           <Image
             src="/assets/svg/under-construction.svg"
@@ -18,7 +18,7 @@ const UnderConstruction = () => {
           <h2 className='under-construction-developers'>Our developers are working on it.</h2>
           <h3 className='under-construction-apologize'>We apologize for any inconvenience.</h3>
         </div>
-      </section>
+      </article>
     </Reveal>
   )
 }

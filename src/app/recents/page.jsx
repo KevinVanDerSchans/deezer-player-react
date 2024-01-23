@@ -3,9 +3,9 @@ import UnderConstruction from "../components/UnderConstruction/UnderConstruction
 
 const RecentsPage = () => {
   return (
-    <div className="discover-container">
+    <section className="discover-container">
       <UnderConstruction />
-    </div>
+    </section>
   )
 }
 

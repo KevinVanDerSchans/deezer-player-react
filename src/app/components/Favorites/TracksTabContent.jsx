@@ -5,9 +5,9 @@ const TracksTabContent = ({ tracks }) => {
   const { data } = useSWR({ entitiesIds: tracks, endpoint: '/api/track' })
 
   return (
-    <div className='library-section'>
+    <section className='library-section'>
       <TrendingTracks tracks={ data } />
-    </div>
+    </section>
   )
 }
 

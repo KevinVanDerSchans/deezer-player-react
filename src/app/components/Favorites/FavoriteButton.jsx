@@ -64,6 +64,7 @@ const FavoriteButton = ({ type, id }) => {
     <button
       className={ isFavorite ? `favorite active` : 'favorite' }
       onClick={ handleFavoriteClick }
+      aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
     >
     {isFavorite
       ? <span className="favorite-icon"><FcLike /></span>

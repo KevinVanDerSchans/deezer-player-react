@@ -1,6 +1,6 @@
 # Deezer API
 
-## Front-end with NextJS / React / Redux
+## NextJS / React / Redux / SWR
 
 <br>
 
@@ -14,9 +14,19 @@
 
 <br>
 
+<div>
+
+    Deezer API is a music player and artist search tool connected to Deezer's external and public API.
+    It allows you to browse its database to find your favorite tracks, play them, and create your own Library with your data.
+
+</div>
+
+<br>
+
 **DEPLOY**:
 <br>
 https://deezer-player-react.vercel.app
+
 
 <br>
 <br>
@@ -27,17 +37,19 @@ https://deezer-player-react.vercel.app
 
 2. [Features](#features)
 
-3. [Technologies and Tools used](#technologies-and-tools-used)
+3. [Components](#components)
 
-4. [Project Setup](#project-setup)
+4. [Technologies and Tools used](#technologies-and-tools-used)
 
-5. [Lighthouse results](#lighthouse-results)
+5. [Project Setup](#project-setup)
 
-6. [Project status](#project-status)
+6. [Lighthouse results](#lighthouse-results)
 
-7. [Contribution](#contribution)
+7. [Project status](#project-status)
 
-8. [Project developer](#project-developer)
+8. [Contribution](#contribution)
+
+9. [Project developer](#project-developer)
 
 <br>
 
@@ -45,7 +57,78 @@ https://deezer-player-react.vercel.app
 
 <div>
 
-    ✔️
+    ✔️ APP state managed with Redux and SWR
+
+    ✔️ Search Engine for Tracks and Artists
+
+    ✔️ Audio Player with Playback Controls
+
+    ✔️ Library for Adding or Removing Favorite Tracks and/or Artists
+
+    ✔️ SCSS palette with custom variables
+
+    ✔️ Flexbox and grid layouts
+
+    ✔️ Responsive design
+
+    ✔️ User feedbacks
+
+</div>
+
+<br>
+
+## Components
+
+<div>
+
+    ⚛️ SEARCH ENGINE
+        - TRACKS: 3 ítems to choose from, and the selected one will play in the PLAYER
+        - ARTISTS: 3 related artists displayed, selecting one will navigate to their respective section
+
+    ⚛️ ARTIST PAGE
+        - Displays the artist's top 5 tracks, with the option to play them
+        - Artist's image
+        - Button to automatically play the first track
+        - Favorite button to add the artist to the Artists section of the Library
+
+    ⚛️ PLAYER
+        - Track title
+        - Artist name
+        - Album image
+        - Track progress bar
+        - Total track duration
+        - Volume control with Mute option
+        - Playback buttons:
+          - Play / Pause
+          - Previous track
+          - Next track
+
+    ⚛️ TRACK
+        - Track title
+        - Artist name
+        - Type of ítem
+        - Album cover
+        - Favorite icon to Add or Remove from Library
+
+    ⚛️ LIBRARY
+        Local and persistent database that allows storing:
+          - Favorite Tracks
+          - Favorite Artists
+
+    ⚛️ FAVORITE BUTTON
+        Allows Adding or Removing the track and/or artist from the Library
+
+    ⚛️ TRENDING TRACKS
+        A dynamic list that compiles the top 12 global tracks
+
+    ⚛️ SPINNER
+        Used for loading elements
+
+    ⚛️ UNDER CONSTRUCTION
+        A presentation component for empty pages
+
+    ⚛️ ERROR / NOT FOUND
+        A presentation component for errors and non-existent pages
 
 </div>
 
@@ -58,17 +141,18 @@ https://deezer-player-react.vercel.app
   <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/next.svg" alt="NextJS" width="60" height="60" style="margin-right: 24px" /></a>
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="60" height="60" style="margin-right: 24px"/></a>
   <a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" width="60" height="60" style="margin-right: 24px" /></a>
-  <br>
-  <br>
   <a href="https://swr.vercel.app/es-ES" target="_blank" rel="noreferrer"> <img src="public/assets/readme/swr.svg" alt="SWR" width="60" height="60" style="margin-right: 24px" /></a>
+  <br>
+  <br>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="60" height="60" style="margin-right: 24px" /></a>
   <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" width="60" height="60" style="margin-right: 24px" /></a>
+  <a href="https://sweetalert2.github.io/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/sweetalert2.png" alt="Sweetalert2" width="95" height="60" style="margin-right: 24px" /></a>
+  <br>
   <br>
   <br>
   <a href="https://eslint.org/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/eslint.svg" alt="ESLint" width="60" height="60" style="margin-right: 24px" /></a>
   <a href="https://prettier.io/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/prettier.svg" alt="Prettier" width="60" height="60" style="margin-right: 24px" /></a>
   <a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/lighthouse.svg" alt="Lighthouse" width="60" height="60" style="margin-right: 24px" /></a>
-  <a href="https://sweetalert2.github.io/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/sweetalert2.png" alt="Sweetalert2" width="95" height="60" style="margin-right: 24px" /></a>
   <a href="https://vercel.com/" target="_blank" rel="noreferrer"> <img src="public/assets/readme/vercel.svg" alt="Vercel" width="60" height="60" style="margin-right: 24px" /></a>
 </div>
 

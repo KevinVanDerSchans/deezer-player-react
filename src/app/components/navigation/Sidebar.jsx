@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <header className="header" id="header">
 
-      <div className="logoAndSearch">
+      <div className="logo-and-search">
         <Link href="/" className="logo">
           <Image
             className='logo'
@@ -25,37 +25,37 @@ const Sidebar = () => {
       <div className="navigation">
         <div className='navbar'>
           <nav>
-            <ul className='navbarList'>
+            <ul className='navbar-list'>
 
-              <li className='navbarLabel'>
+              <li className='navbar-label'>
                 <NavLink slug=''>
-                  <span className='navbarLabel'>Home</span>
+                  <span className='navbar-label'>Home</span>
                 </NavLink>
               </li>
 
-              <li className='navbarLabel'>
+              <li className='navbar-label'>
                 <NavLink slug='discover'>
-                  <span className='navbarDiscoverLabel'>Discover</span>
+                  <span className='navbar-discover-label'>Discover</span>
                 </NavLink>
               </li>
 
-              <li className='navbarLabel'>
+              <li className='navbar-label'>
                 <NavLink slug='recents'>
-                  <span className='navbarLabel'>Recents</span>
+                  <span className='navbar-label'>Recents</span>
                 </NavLink>
               </li>
 
-              <li className='navbarLabel'>
+              <li className='navbar-label'>
                 <NavLink slug='library'>
-                  <span className='navbarLabel'>Library</span>
+                  <span className='navbar-label'>Library</span>
                 </NavLink>
               </li>
             </ul>
           </nav>
         </div>
 
-        <div className="userIconContainer">
-          <Image src='/assets/svg/user-icon.svg' alt='User icon' className="userIcon" width={50} height={50} />
+        <div className="user-icon-container">
+          <Image src='/assets/svg/user-icon.svg' alt='User icon' width={50} height={50} />
         </div>
 
       </div>

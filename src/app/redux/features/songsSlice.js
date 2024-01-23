@@ -21,7 +21,7 @@ const songsSlice = createSlice({
       const { entities, activeEntity } = state;
       const isLastSong = entities.length - 1 <= activeEntity;
 
-      if(isLastSong) {
+      if (isLastSong) {
         state.activeEntity = 0;
         return;
       }
@@ -31,7 +31,7 @@ const songsSlice = createSlice({
     playPreviousSong(state) {
       const { entities, activeEntity } = state;
 
-      if(activeEntity <= 0) {
+      if (activeEntity <= 0) {
         state.activeEntity = entities.length - 1;
         return;
       }

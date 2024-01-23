@@ -12,7 +12,6 @@ const TrackListItem = ({ index, playlist, track: { id, title, artist, album, typ
     <li
       className='track-list-item'
       onClick={ () => dispatch(playSong({index, playlist})) }
-      role='button'
       aria-label={`Play the son ${title} by ${artist.name}`}
     >
 

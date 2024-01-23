@@ -1,6 +1,6 @@
 # Deezer API
 
-## NextJS / React / Redux / SWR
+## NextJS / React (Redux & SWR)
 
 <br>
 
@@ -17,7 +17,8 @@
 <div>
 
     Deezer API is a music player and artist search tool connected to Deezer's external and public API.
-    It allows you to browse its database to find your favorite tracks, play them, and create your own Library with your data.
+    It allows you to browse its database to find your favorite tracks, play them, and create your own
+    Library with your data.
 
 </div>
 
@@ -26,7 +27,6 @@
 **DEPLOY**:
 <br>
 https://deezer-player-react.vercel.app
-
 
 <br>
 <br>
@@ -41,13 +41,13 @@ https://deezer-player-react.vercel.app
 
 4. [Technologies and Tools used](#technologies-and-tools-used)
 
-5. [Project Setup](#project-setup)
+5. [Lighthouse results](#lighthouse-results)
 
-6. [Lighthouse results](#lighthouse-results)
+6. [Project Setup](#project-setup)
 
-7. [Project status](#project-status)
+7. [Contribution](#contribution)
 
-8. [Contribution](#contribution)
+8. [Project status](#project-status)
 
 9. [Project developer](#project-developer)
 
@@ -158,6 +158,18 @@ https://deezer-player-react.vercel.app
 
 <br>
 
+## Lighthouse results
+
+<div align="center">
+  <img
+    src="public/assets/readme/lighthouse-results.png"
+    alt="Lighthouse results"
+    width="850"
+  >
+</div>
+
+<br>
+
 ## Project Setup
 
 First, run the development server:
@@ -195,26 +207,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 <br>
 
-## Lighthouse results
-
-<div align="center">
-  <img
-    src="public/assets/readme/lighthouse-results.png"
-    alt="Lighthouse results"
-    width="850"
-  >
-</div>
-
-<br>
-
-## Project status
-
-<br>
-
-![COMPLETED](https://img.shields.io/badge/COMPLETED-green.svg)
-
-<br>
-
 ## Contribution
 
 If you want to contribute to this project, follow these steps:
@@ -228,6 +220,14 @@ If you want to contribute to this project, follow these steps:
 4. Push to branch: `git push origin feature/your-feature-name`
 
 5. Send a pull request to the original repository.
+
+<br>
+
+## Project status
+
+<br>
+
+![COMPLETED](https://img.shields.io/badge/COMPLETED-green.svg)
 
 <br>
 
